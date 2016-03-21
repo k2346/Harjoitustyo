@@ -1,0 +1,79 @@
+﻿<Page
+    x:Class="SuperAwesomePotatoPrincessDressingGame.GamePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SuperAwesomePotatoPrincessDressingGame"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid 
+        Background="Black" Margin="10,10,10,0">
+        <Image Source="Assets/Images/Taustakuva_game.png" Width="auto" Height="auto"
+                   HorizontalAlignment="Center" />
+        <StackPanel HorizontalAlignment="Left" Height="640" Margin="280,0,0,0" VerticalAlignment="Top" Width="425">
+            <Image Source="Assets/Images/potato_naked.png"  x:Name="PotatoImage" HorizontalAlignment="Center" Height="640" VerticalAlignment="Center" Width="327" Margin="45,0,53,0"   />
+        </StackPanel>
+
+        <TextBlock x:Name="WardTextBlock" TextWrapping="Wrap" Text="Wardrobe" FontSize="29.333" FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars" Margin="760,10,281,655">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="#FF0070A0"/>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <ScrollViewer HorizontalAlignment="Left" Height="614" VerticalAlignment="Top" Width="287" Margin="712,70,0,0"  VerticalScrollBarVisibility="Visible" 
+                        HorizontalScrollBarVisibility="Visible"  >
+            <ScrollViewer.BorderBrush>
+                <SolidColorBrush Color="{StaticResource Potato_blue}"/>
+            </ScrollViewer.BorderBrush>
+            <RelativePanel Height="614" Width="287">
+                <Image Source="Assets/Images/potato_naked.png" x:Name="Dress1_1" Height="100" Width="auto" Margin="5"/>
+                <Image Source="Assets/Images/potato_naked.png" x:Name="Dress1_2" Height="100" Width="auto" Margin="5" RelativePanel.RightOf="Dress1_1"/>
+                <Image Source="Assets/Images/potato_naked.png" x:Name="Dress1_3" Height="100" Width="auto" Margin="5" RelativePanel.RightOf="Dress1_2"/>
+
+                <Image Source="Assets/Images/potato_naked.png" x:Name="Dress2_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress1_1"/>
+                <Image Source="Assets/Images/potato_naked.png" x:Name="Dress2_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress1_1" RelativePanel.RightOf="Dress2_1"/>
+                <Image Source="Assets/Images/potato_naked.png" x:Name="Dress2_3" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress1_1" RelativePanel.RightOf="Dress2_2"/>
+
+                <Image Source="Assets/Images/potato_naked.png" x:Name="Dress3_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress2_1"/>
+                <Image Source="Assets/Images/potato_naked.png" x:Name="Dress3_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress2_1" RelativePanel.RightOf="Dress2_1"/>
+                <Image Source="Assets/Images/potato_naked.png" x:Name="Dress3_3" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress2_1" RelativePanel.RightOf="Dress2_2"/>
+
+                <Image Source="Assets/Images/potato_naked.png" x:Name="Hair1_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress3_1"/>
+                <Image Source="Assets/Images/potato_naked.png" x:Name="Hair1_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress3_1" RelativePanel.RightOf="Dress2_1"/>
+                <Image Source="Assets/Images/potato_naked.png" x:Name="Hair1_3" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress3_1" RelativePanel.RightOf="Dress2_2"/>
+
+                <Image Source="Assets/Images/potato_naked.png" x:Name="Hair2_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair1_1"/>
+                <Image Source="Assets/Images/potato_naked.png" x:Name="Hair2_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair1_1" RelativePanel.RightOf="Dress2_1"/>
+                <Image Source="Assets/Images/potato_naked.png" x:Name="Hair2_3" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair1_1" RelativePanel.RightOf="Dress2_2"/>
+
+                <Image Source="Assets/Images/potato_naked.png" x:Name="Hair3_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair2_1"/>
+                <Image Source="Assets/Images/potato_naked.png" x:Name="Hair3_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair2_1" RelativePanel.RightOf="Dress2_1"/>
+                <Image Source="Assets/Images/potato_naked.png" x:Name="Hair3_3" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair2_1" RelativePanel.RightOf="Dress2_2"/>
+
+                <Image Source="Assets/Images/potato_naked.png" x:Name="Hair4_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair3_1"/>
+                <Image Source="Assets/Images/potato_naked.png" x:Name="Hair4_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair3_1" RelativePanel.RightOf="Dress2_1"/>
+                <Image Source="Assets/Images/potato_naked.png" x:Name="Hair4_3" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair3_1" RelativePanel.RightOf="Dress2_2"/>
+
+                <Image Source="Assets/Images/potato_naked.png" x:Name="Hair5_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair4_1"/>
+                <Image Source="Assets/Images/potato_naked.png" x:Name="Hair5_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair4_1" RelativePanel.RightOf="Dress2_1"/>
+                <Image Source="Assets/Images/potato_naked.png" x:Name="Hair5_3" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair4_1" RelativePanel.RightOf="Dress2_2"/>
+
+                <Image Source="Assets/Images/potato_naked.png" x:Name="Crown_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair5_1"/>
+                <Image Source="Assets/Images/potato_naked.png" x:Name="Crown_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair5_1" RelativePanel.RightOf="Dress2_1"/>
+
+                <Image Source="Assets/Images/potato_naked.png" x:Name="Acce1_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Crown_1" RelativePanel.RightOf="Dress2_2"/>
+                <Image Source="Assets/Images/potato_naked.png" x:Name="Acc1_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Crown_1" RelativePanel.RightOf="Dress2_1"/>
+
+
+            </RelativePanel>
+
+
+
+
+
+
+
+        </ScrollViewer>
+
+    </Grid>
+</Page>
