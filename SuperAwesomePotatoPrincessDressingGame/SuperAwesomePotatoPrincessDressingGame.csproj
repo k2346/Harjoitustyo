@@ -116,6 +116,55 @@
     <None Include="SuperAwesomePotatoPrincessDressingGame_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Images\assat\kruunu1.png" />
+    <Content Include="Assets\Images\assat\kruunu2.png" />
+    <Content Include="Assets\Images\assat\ripset.png" />
+    <Content Include="Assets\Images\assat\suu1.png" />
+    <Content Include="Assets\Images\assat\suu2.png" />
+    <Content Include="Assets\Images\assat\sydan.png" />
+    <Content Include="Assets\Images\assat\sydan_2.png" />
+    <Content Include="Assets\Images\assat\sydan_3.png" />
+    <Content Include="Assets\Images\hiukset\tukka1.png" />
+    <Content Include="Assets\Images\hiukset\tukka1_2.png" />
+    <Content Include="Assets\Images\hiukset\tukka1_3.png" />
+    <Content Include="Assets\Images\hiukset\tukka2.png" />
+    <Content Include="Assets\Images\hiukset\tukka2_2.png" />
+    <Content Include="Assets\Images\hiukset\tukka2_3.png" />
+    <Content Include="Assets\Images\hiukset\tukka3.png" />
+    <Content Include="Assets\Images\hiukset\tukka3_2.png" />
+    <Content Include="Assets\Images\hiukset\tukka3_3.png" />
+    <Content Include="Assets\Images\hiukset\tukka4.png" />
+    <Content Include="Assets\Images\hiukset\tukka4_2.png" />
+    <Content Include="Assets\Images\hiukset\tukka4_3.png" />
+    <Content Include="Assets\Images\kaverit\O1.png" />
+    <Content Include="Assets\Images\kaverit\O11.png" />
+    <Content Include="Assets\Images\kaverit\O12.png" />
+    <Content Include="Assets\Images\kaverit\O13.png" />
+    <Content Include="Assets\Images\kaverit\O14.png" />
+    <Content Include="Assets\Images\kaverit\O1O.png" />
+    <Content Include="Assets\Images\kaverit\O2.png" />
+    <Content Include="Assets\Images\kaverit\O3.png" />
+    <Content Include="Assets\Images\kaverit\O4.png" />
+    <Content Include="Assets\Images\kaverit\O5.png" />
+    <Content Include="Assets\Images\kaverit\O6.png" />
+    <Content Include="Assets\Images\kaverit\O7.png" />
+    <Content Include="Assets\Images\kaverit\O8.png" />
+    <Content Include="Assets\Images\kaverit\O9.png" />
+    <Content Include="Assets\Images\mekot\mekko1.png" />
+    <Content Include="Assets\Images\mekot\mekko1_2.png" />
+    <Content Include="Assets\Images\mekot\mekko1_3.png" />
+    <Content Include="Assets\Images\mekot\mekko2.png" />
+    <Content Include="Assets\Images\mekot\mekko2_2.png" />
+    <Content Include="Assets\Images\mekot\mekko2_3.png" />
+    <Content Include="Assets\Images\mekot\mekko3.png" />
+    <Content Include="Assets\Images\mekot\mekko3_2.png" />
+    <Content Include="Assets\Images\mekot\mekko3_3.png" />
+    <Content Include="Assets\Images\mekot\mekko4.png" />
+    <Content Include="Assets\Images\mekot\mekko4_2.png" />
+    <Content Include="Assets\Images\mekot\mekko4_3.png" />
+    <Content Include="Assets\Images\mekot\mekko5.png" />
+    <Content Include="Assets\Images\mekot\mekko5_2.png" />
+    <Content Include="Assets\Images\mekot\mekko5_3.png" />
     <Content Include="Assets\Images\potato_naked.png" />
     <Content Include="Assets\Images\Taustakuva.png" />
     <Content Include="Assets\Images\Taustakuva_game.png" />
@@ -143,6 +192,7 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

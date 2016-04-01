@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -25,6 +26,25 @@ namespace SuperAwesomePotatoPrincessDressingGame
         public GamePage()
         {
             this.InitializeComponent();
+        }
+
+        private void Dress1_1_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Debug.WriteLine("JEE");
+            Image image = new Image();
+            Image sImage = sender as Image;
+            image.Source = sImage.Source;
+            image.Width = 325;
+           // image.Height = 100;
+            image.IsTapEnabled = true;
+            image.Tapped += Image_Tapped;
+            //image.Margin = 
+            MyGrid.Children.Add(image);
+        }
+
+        private void Image_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            MyGrid.Children.Remove(sender as Image);
         }
     }
 }

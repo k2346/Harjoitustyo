@@ -8,6 +8,7 @@
     mc:Ignorable="d">
 
     <Grid 
+        x:Name="MyGrid"
         Background="Black" Margin="10,10,10,0">
         <Image Source="Assets/Images/Taustakuva_game.png" Width="auto" Height="auto"
                    HorizontalAlignment="Center" />
@@ -26,9 +27,9 @@
                 <SolidColorBrush Color="{StaticResource Potato_blue}"/>
             </ScrollViewer.BorderBrush>
             <RelativePanel Height="614" Width="287">
-                <Image Source="Assets/Images/potato_naked.png" x:Name="Dress1_1" Height="100" Width="auto" Margin="5"/>
-                <Image Source="Assets/Images/potato_naked.png" x:Name="Dress1_2" Height="100" Width="auto" Margin="5" RelativePanel.RightOf="Dress1_1"/>
-                <Image Source="Assets/Images/potato_naked.png" x:Name="Dress1_3" Height="100" Width="auto" Margin="5" RelativePanel.RightOf="Dress1_2"/>
+                <Image Tapped="Dress1_1_Tapped" IsTapEnabled="True" Source="Assets/Images/mekot/mekko1.png" x:Name="Dress1_1" Height="100" Width="auto" Margin="5"/>
+                <Image Source="Assets/Images/mekot/mekko1_2.png" x:Name="Dress1_2" Height="100" Width="auto" Margin="5" RelativePanel.RightOf="Dress1_1"/>
+                <Image Source="Assets/Images/mekot/mekko1_3.png" x:Name="Dress1_3" Height="100" Width="auto" Margin="5" RelativePanel.RightOf="Dress1_2"/>
 
                 <Image Source="Assets/Images/potato_naked.png" x:Name="Dress2_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress1_1"/>
                 <Image Source="Assets/Images/potato_naked.png" x:Name="Dress2_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress1_1" RelativePanel.RightOf="Dress2_1"/>
