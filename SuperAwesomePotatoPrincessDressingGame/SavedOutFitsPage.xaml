@@ -1,0 +1,121 @@
+﻿<Page
+    x:Class="SuperAwesomePotatoPrincessDressingGame.SavedOutFitsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SuperAwesomePotatoPrincessDressingGame"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <Color x:Key="Potato_lila">#FFC3B1F7</Color>
+        <Color x:Key="Potato_dark_lila">#FF8E06E4</Color>
+        <Color x:Key="Potato_yellow">#FFE7DB67</Color>
+        <Color x:Key="Potato_yellow1">#FFE7DB67</Color>
+        <Color x:Key="Potato_dark_lilac">#FF8E06E4</Color>
+    </Page.Resources>
+
+    <Grid Background="Black">
+        <Image Source="Assets/Images/Taustakuva.png" Width="auto" Height="auto"
+                   HorizontalAlignment="Center" />
+        <StackPanel  VerticalAlignment="Center"
+                     HorizontalAlignment="Center" 
+                     Height="314"
+                     Width="303" 
+                     Margin="503,291,474,115">
+            <Image Source="Assets/Images/potato_naked.png"  
+        		x:Name="PotatoImage" 
+        		HorizontalAlignment="Center" 
+        		VerticalAlignment="Center" 
+        		Height="314" Width="276" Margin="0,0,27,0"
+                   />
+        </StackPanel>
+        <Button x:Name="LeftButton"
+                    Content="Left"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Padding="10" 
+                    FontSize="17"
+                    Click="LeftButton_Click"
+                    FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars"
+                    Background="#02000000" Margin="431,338,800,338">
+            <Button.BorderBrush>
+                <SolidColorBrush 
+                        Color="{StaticResource Potato_yellow}"/>
+            </Button.BorderBrush>
+            <Button.Foreground>
+                <SolidColorBrush Color="{StaticResource Potato_dark_lilac}"/>
+            </Button.Foreground>
+        </Button>
+        <Button x:Name="RightButton" 
+                    Content="Right"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Padding="10" 
+                    FontSize="17" 
+                    Click="RightButton_Click" 
+                    FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars"
+                    Background="#02000000" Margin="806,338,421,338">
+            <Button.BorderBrush>
+                <SolidColorBrush 
+                            Color="{StaticResource Potato_yellow}"/>
+            </Button.BorderBrush>
+            <Button.Foreground>
+                <SolidColorBrush Color="{StaticResource Potato_dark_lilac}"/>
+            </Button.Foreground>
+        </Button>
+        <Button x:Name="ReturnButton"
+                Content="Return" Padding="10" 
+                Margin="282,0,0,676" FontSize="27" 
+                Click="ReturnButton_Click" 
+                FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars"
+                Background="#02000000">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{StaticResource Potato_yellow}"/>
+            </Button.BorderBrush>
+
+            <Button.Foreground>
+                <SolidColorBrush Color="{StaticResource Potato_blue}"/>
+            </Button.Foreground>
+        </Button>
+        <Button x:Name="QuitButton"
+                Content="Quit"
+                Padding="10" 
+                Margin="952,676,281,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center" 
+                FontSize="17" 
+                FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars"
+                Background="#02000000" RenderTransformOrigin="0.429,-2.517">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{StaticResource Potato_yellow}"/>
+            </Button.BorderBrush>
+            <Button.Foreground>
+                <SolidColorBrush Color="{StaticResource Potato_blue}"/>
+            </Button.Foreground>
+        </Button>
+        <TextBlock x:Name="SavedOutFitstextBlock" 
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Top"
+                   TextWrapping="Wrap" 
+                   Text="Saved Outfits"
+                   TextAlignment="Center"
+                   FontSize="70" 
+                   FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars"
+                   Height="160" Width="478" Margin="405,126,397,0">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{StaticResource Potato_blue}"/>
+            </TextBlock.Foreground>
+
+
+        </TextBlock>
+
+
+
+
+
+
+    </Grid>
+</Page>
+
+
