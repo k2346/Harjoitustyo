@@ -34,11 +34,11 @@
                     Content="Left"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
-                    Padding="10" 
-                    FontSize="17"
+                    Padding="5" 
+                    FontSize="27"
                     Click="LeftButton_Click"
                     FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars"
-                    Background="#02000000" Margin="431,338,800,338">
+                    Background="#02000000" Margin="405,338,800,338" Width="75" Height="44">
             <Button.BorderBrush>
                 <SolidColorBrush 
                         Color="{StaticResource Potato_yellow}"/>
@@ -51,11 +51,11 @@
                     Content="Right"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
-                    Padding="10" 
-                    FontSize="17" 
+                    Padding="5" 
+                    FontSize="27" 
                     Click="RightButton_Click" 
                     FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars"
-                    Background="#02000000" Margin="806,338,421,338">
+                    Background="#02000000" Margin="806,338,397,338" Width="77" Height="44">
             <Button.BorderBrush>
                 <SolidColorBrush 
                             Color="{StaticResource Potato_yellow}"/>
@@ -65,7 +65,8 @@
             </Button.Foreground>
         </Button>
         <Button x:Name="ReturnButton"
-                Content="Return" Padding="10" 
+                Content="Return"
+                Padding="10" 
                 Margin="282,0,0,676" FontSize="27" 
                 Click="ReturnButton_Click" 
                 FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars"
@@ -81,12 +82,12 @@
         <Button x:Name="QuitButton"
                 Content="Quit"
                 Padding="10" 
-                Margin="952,676,281,0"
+                Margin="920,662,281,0"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center" 
-                FontSize="17" 
+                FontSize="27" 
                 FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars"
-                Background="#02000000" RenderTransformOrigin="0.429,-2.517">
+                Background="#02000000" RenderTransformOrigin="0.429,-2.517" Height="58" Width="79" Click="QuitButton_Click">
             <Button.BorderBrush>
                 <SolidColorBrush Color="{StaticResource Potato_yellow}"/>
             </Button.BorderBrush>
