@@ -15,9 +15,8 @@
     </Page.Resources>
 
     <Grid Background="Black">
-        <Image Source="Assets/Images/Taustakuva_hahmot.png" Width="auto" Height="auto"
-                   HorizontalAlignment="Center" />
-        <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Padding="20"  Height="314" Width="303" Margin="503,291,474,115" >
+        <Image Source="Assets/Images/Taustakuva_hahmot.png" Width="1280" Height="720"></Image>
+        <StackPanel  VerticalAlignment="Bottom" HorizontalAlignment="Center" Padding="0"  Height="279" Width="303">
             <Button x:Name="PlayButton" Content="Play" Padding="10" Margin="20" HorizontalAlignment="Center"  FontSize="17" Click="PlayButton_Click" FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars" Background="#02000000">
                 <Button.BorderBrush>
                     <SolidColorBrush Color="{StaticResource Potato_yellow}"/>
@@ -35,7 +34,9 @@
                     <SolidColorBrush Color="{StaticResource Potato_blue}"/>
                 </Button.Foreground>
             </Button>
-            <Button x:Name="QuitButton" Content="Quit" Padding="10" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="17" FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars" Background="#02000000">
+            <Button x:Name="QuitButton" Content="Quit" Padding="10" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                    FontSize="17" 
+                    FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars" Background="#02000000">
                 <Button.BorderBrush>
                     <SolidColorBrush Color="{StaticResource Potato_yellow}"/>
                 </Button.BorderBrush>
@@ -45,6 +46,23 @@
             </Button>
 
         </StackPanel>
+        <Button x:Name="SoundButton"
+                Content="Sound"
+                Padding="10" 
+                FontSize="27" 
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Click="SoundButton_Click"
+                FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars"
+                Background="#02000000">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{StaticResource Potato_yellow}"/>
+            </Button.BorderBrush>
+
+            <Button.Foreground>
+                <SolidColorBrush Color="{StaticResource Potato_blue}"/>
+            </Button.Foreground>
+        </Button>
 
 
 

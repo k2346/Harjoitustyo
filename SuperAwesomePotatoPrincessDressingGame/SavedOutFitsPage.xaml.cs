@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,6 +26,9 @@ namespace SuperAwesomePotatoPrincessDressingGame
         public SavedOutFitsPage()
         {
             this.InitializeComponent();
+            // try open 800x600 window
+            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
+            ApplicationView.PreferredLaunchViewSize = new Size(800, 600);
         }
 
         private void LeftButton_Click(object sender, RoutedEventArgs e)
@@ -39,12 +43,20 @@ namespace SuperAwesomePotatoPrincessDressingGame
 
         private void ReturnButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MainPage));
-        }
+            Frame rootFrame = Window.Current.Content as Frame;
 
+            if (rootFrame == null) return;
+
+            // Navigate back if possible
+            if (rootFrame.CanGoBack)
+            {
+                rootFrame.GoBack();
+            }
+        }
         private void QuitButton_Click(object sender, RoutedEventArgs e)
         {
-
+             
         }
+
     }
 }

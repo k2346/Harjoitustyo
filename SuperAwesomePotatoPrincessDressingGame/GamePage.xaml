@@ -15,6 +15,25 @@
         <StackPanel HorizontalAlignment="Left" Height="640" Margin="280,0,0,0" VerticalAlignment="Top" Width="425">
             <Image Source="Assets/Images/potato_naked.png"  x:Name="PotatoImage" HorizontalAlignment="Center" Height="640" VerticalAlignment="Center" Width="327" Margin="45,0,53,0"   />
         </StackPanel>
+        
+        <Button x:Name="ReturnButton"
+                Content="Return"
+                Padding="10" 
+                FontSize="27" 
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Click="ReturnButton_Click" 
+                FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars"
+                Background="#02000000">
+            
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{StaticResource Potato_yellow}"/>
+            </Button.BorderBrush>
+
+            <Button.Foreground>
+                <SolidColorBrush Color="{StaticResource Potato_blue}"/>
+            </Button.Foreground>
+        </Button>
 
         <TextBlock x:Name="WardTextBlock" TextWrapping="Wrap" Text="Wardrobe" FontSize="29.333" FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars" Margin="760,10,281,655">
             <TextBlock.Foreground>

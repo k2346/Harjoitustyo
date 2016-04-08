@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -26,6 +27,9 @@ namespace SuperAwesomePotatoPrincessDressingGame
         public GamePage()
         {
             this.InitializeComponent();
+            // try open 800x600 window
+            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
+            ApplicationView.PreferredLaunchViewSize = new Size(800, 600);
         }
 
         private void Dress1_1_Tapped(object sender, TappedRoutedEventArgs e)
@@ -46,5 +50,19 @@ namespace SuperAwesomePotatoPrincessDressingGame
         {
             MyGrid.Children.Remove(sender as Image);
         }
+
+        private void ReturnButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame rootFrame = Window.Current.Content as Frame;
+
+            if (rootFrame == null) return;
+
+            // Navigate back if possible
+            if (rootFrame.CanGoBack)
+            {
+                rootFrame.GoBack();
+            }
+        }
+    
     }
 }

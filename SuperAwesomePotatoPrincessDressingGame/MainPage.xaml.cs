@@ -22,13 +22,14 @@ namespace SuperAwesomePotatoPrincessDressingGame
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
     public sealed partial class MainPage : Page
+
     {
         public MainPage()
         {
             this.InitializeComponent();
             // try open 800x600 window
-            //ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
-            //ApplicationView.PreferredLaunchViewSize = new Size(800, 600);
+            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
+            ApplicationView.PreferredLaunchViewSize = new Size(800, 600);
 
         }
 
@@ -39,9 +40,18 @@ namespace SuperAwesomePotatoPrincessDressingGame
             this.Frame.Navigate(typeof(GamePage));
         }
 
+        //Go to Saved outfits page
         private void SavedButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(SavedOutFitsPage));
+        }
+
+        //SOUNDBUTTON 
+        private void SoundButton_Click(object sender, RoutedEventArgs e)
+        {
+            WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
+
+               
         }
     }
 }
