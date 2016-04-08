@@ -27,7 +27,7 @@
                     <SolidColorBrush Color="{StaticResource Potato_blue}"/>
                 </Button.Foreground>
             </Button>
-            <Button x:Name="SavedButton" Content="Look Saved Outfits" Padding="10" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="17" FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars"  Background="{x:Null}">
+            <Button x:Name="SavedButton" Content="Look Saved Outfits" Padding="10" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="17" FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars"  Background="{x:Null}" Click="SavedButton_Click">
                 <Button.BorderBrush>
                     <SolidColorBrush Color="{StaticResource Potato_yellow}"/>
                 </Button.BorderBrush>

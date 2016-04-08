@@ -38,5 +38,10 @@ namespace SuperAwesomePotatoPrincessDressingGame
             
             this.Frame.Navigate(typeof(GamePage));
         }
+
+        private void SavedButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SavedOutFitsPage));
+        }
     }
 }

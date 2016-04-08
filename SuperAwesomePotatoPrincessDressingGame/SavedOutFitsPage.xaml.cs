@@ -39,7 +39,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
 
         private void ReturnButton_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Frame.Navigate(typeof(MainPage));
         }
 
         private void QuitButton_Click(object sender, RoutedEventArgs e)
