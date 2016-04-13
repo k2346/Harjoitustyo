@@ -27,9 +27,9 @@ namespace SuperAwesomePotatoPrincessDressingGame
         public MainPage()
         {
             this.InitializeComponent();
-            // try open 800x600 window
+            // try open 800x800 window
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
-            ApplicationView.PreferredLaunchViewSize = new Size(800, 600);
+            ApplicationView.PreferredLaunchViewSize = new Size(1000, 1000);
 
         }
 

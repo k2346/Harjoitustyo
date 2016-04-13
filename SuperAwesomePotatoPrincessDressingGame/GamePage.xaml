@@ -5,17 +5,26 @@
     xmlns:local="using:SuperAwesomePotatoPrincessDressingGame"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    Width="1000"
+    Height="1000"
+    >
 
     <Grid 
         x:Name="MyGrid"
         Background="Black" Margin="10,10,10,0">
         <Image Source="Assets/Images/Taustakuva_game.png" Width="auto" Height="auto"
                    HorizontalAlignment="Center" />
-        <StackPanel HorizontalAlignment="Left" Height="640" Margin="280,0,0,0" VerticalAlignment="Top" Width="425">
+        <Image Source="Assets/Images/potato_naked.png"  x:Name="PotatoImage" HorizontalAlignment="Center" Height="640" VerticalAlignment="Center" Width="327" Margin="139,231,514,119"   />
+        <!--
+        <StackPanel HorizontalAlignment="Left" Height="640" Margin="10,70,0,0" VerticalAlignment="Top" Width="425">
             <Image Source="Assets/Images/potato_naked.png"  x:Name="PotatoImage" HorizontalAlignment="Center" Height="640" VerticalAlignment="Center" Width="327" Margin="45,0,53,0"   />
-        </StackPanel>
-        
+        </StackPanel> 
+        -->
+
+        <!--
+        TÄMÄ EI TOIMI, AIHEUTTAA GAME PAGEN VIRHEEN
+        TESTAILE TOIMIVAKSI
         <Button x:Name="ReturnButton"
                 Content="Return"
                 Padding="10" 
@@ -33,56 +42,67 @@
             <Button.Foreground>
                 <SolidColorBrush Color="{StaticResource Potato_blue}"/>
             </Button.Foreground>
-        </Button>
+        </Button> -->
 
-        <TextBlock x:Name="WardTextBlock" TextWrapping="Wrap" Text="Wardrobe" FontSize="29.333" FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars" Margin="760,10,281,655">
+        <TextBlock x:Name="WardTextBlock" TextWrapping="Wrap" Text="Help Potato to get a stunning outfit!" FontSize="40" FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars" Margin="221,45,220,890">
             <TextBlock.Foreground>
                 <SolidColorBrush Color="#FF0070A0"/>
             </TextBlock.Foreground>
         </TextBlock>
-        <ScrollViewer HorizontalAlignment="Left" Height="614" VerticalAlignment="Top" Width="287" Margin="712,70,0,0"  VerticalScrollBarVisibility="Visible" 
+        <ScrollViewer HorizontalAlignment="Left" Height="721" VerticalAlignment="Top" Width="342" Margin="628,231,0,0"  VerticalScrollBarVisibility="Visible" 
                         HorizontalScrollBarVisibility="Visible"  >
             <ScrollViewer.BorderBrush>
                 <SolidColorBrush Color="{StaticResource Potato_blue}"/>
             </ScrollViewer.BorderBrush>
-            <RelativePanel Height="614" Width="287">
+            <RelativePanel>
                 <Image Tapped="Dress1_1_Tapped" IsTapEnabled="True" Source="Assets/Images/mekot/mekko1.png" x:Name="Dress1_1" Height="100" Width="auto" Margin="5"/>
-                <Image Source="Assets/Images/mekot/mekko1_2.png" x:Name="Dress1_2" Height="100" Width="auto" Margin="5" RelativePanel.RightOf="Dress1_1"/>
-                <Image Source="Assets/Images/mekot/mekko1_3.png" x:Name="Dress1_3" Height="100" Width="auto" Margin="5" RelativePanel.RightOf="Dress1_2"/>
+                <Image Tapped="Dress1_2_Tapped" IsTapEnabled="True" Source="Assets/Images/mekot/mekko1_2.png" x:Name="Dress1_2" Height="100" Width="auto" Margin="5" RelativePanel.RightOf="Dress1_1"/>
+                <Image Tapped="Dress1_3_Tapped" IsTapEnabled="True" Source="Assets/Images/mekot/mekko1_3.png" x:Name="Dress1_3" Height="100" Width="auto" Margin="5" RelativePanel.RightOf="Dress1_2"/>
 
-                <Image Source="Assets/Images/potato_naked.png" x:Name="Dress2_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress1_1"/>
-                <Image Source="Assets/Images/potato_naked.png" x:Name="Dress2_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress1_1" RelativePanel.RightOf="Dress2_1"/>
-                <Image Source="Assets/Images/potato_naked.png" x:Name="Dress2_3" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress1_1" RelativePanel.RightOf="Dress2_2"/>
+                <Image Tapped="Dress2_1_Tapped" IsTapEnabled="True" Source="Assets/Images/mekot/mekko2.png" x:Name="Dress2_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress1_1"/>
+                <Image Tapped="Dress2_2_Tapped" IsTapEnabled="True" Source="Assets/Images/mekot/mekko2_2.png" x:Name="Dress2_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress1_1" RelativePanel.RightOf="Dress2_1"/>
+                <Image Tapped="Dress2_3_Tapped" IsTapEnabled="True" Source="Assets/Images/mekot/mekko2_3.png" x:Name="Dress2_3" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress1_1" RelativePanel.RightOf="Dress2_2"/>
 
-                <Image Source="Assets/Images/potato_naked.png" x:Name="Dress3_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress2_1"/>
-                <Image Source="Assets/Images/potato_naked.png" x:Name="Dress3_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress2_1" RelativePanel.RightOf="Dress2_1"/>
-                <Image Source="Assets/Images/potato_naked.png" x:Name="Dress3_3" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress2_1" RelativePanel.RightOf="Dress2_2"/>
+                <Image Tapped="Dress3_1_Tapped" IsTapEnabled="True" Source="Assets/Images/mekot/mekko3.png" x:Name="Dress3_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress2_1"/>
+                <Image Tapped="Dress3_2_Tapped" IsTapEnabled="True" Source="Assets/Images/mekot/mekko3_2.png" x:Name="Dress3_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress2_1" RelativePanel.RightOf="Dress2_1"/>
+                <Image Tapped="Dress3_3_Tapped" IsTapEnabled="True" Source="Assets/Images/mekot/mekko3_3.png" x:Name="Dress3_3" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress2_1" RelativePanel.RightOf="Dress2_2"/>
 
-                <Image Source="Assets/Images/potato_naked.png" x:Name="Hair1_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress3_1"/>
-                <Image Source="Assets/Images/potato_naked.png" x:Name="Hair1_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress3_1" RelativePanel.RightOf="Dress2_1"/>
-                <Image Source="Assets/Images/potato_naked.png" x:Name="Hair1_3" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress3_1" RelativePanel.RightOf="Dress2_2"/>
+                <Image Tapped="Dress4_1_Tapped" IsTapEnabled="True" Source="Assets/Images/mekot/mekko4.png" x:Name="Dress4_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress3_1"/>
+                <Image Tapped="Dress4_2_Tapped" IsTapEnabled="True" Source="Assets/Images/mekot/mekko4_2.png" x:Name="Dress4_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress3_1" RelativePanel.RightOf="Dress2_1"/>
+                <Image Tapped="Dress4_3_Tapped" IsTapEnabled="True" Source="Assets/Images/mekot/mekko4_3.png" x:Name="Dress4_3" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress3_1" RelativePanel.RightOf="Dress2_2"/>
 
-                <Image Source="Assets/Images/potato_naked.png" x:Name="Hair2_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair1_1"/>
-                <Image Source="Assets/Images/potato_naked.png" x:Name="Hair2_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair1_1" RelativePanel.RightOf="Dress2_1"/>
-                <Image Source="Assets/Images/potato_naked.png" x:Name="Hair2_3" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair1_1" RelativePanel.RightOf="Dress2_2"/>
+                <Image Tapped="Dress5_1_Tapped" IsTapEnabled="True" Source="Assets/Images/mekot/mekko5.png" x:Name="Dress5_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress4_1"/>
+                <Image Tapped="Dress5_2_Tapped" IsTapEnabled="True" Source="Assets/Images/mekot/mekko5_2.png" x:Name="Dress5_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress4_1" RelativePanel.RightOf="Dress2_1"/>
+                <Image Tapped="Dress5_3_Tapped" IsTapEnabled="True" Source="Assets/Images/mekot/mekko5_3.png" x:Name="Dress5_3" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress4_1" RelativePanel.RightOf="Dress2_2"/>
 
-                <Image Source="Assets/Images/potato_naked.png" x:Name="Hair3_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair2_1"/>
-                <Image Source="Assets/Images/potato_naked.png" x:Name="Hair3_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair2_1" RelativePanel.RightOf="Dress2_1"/>
-                <Image Source="Assets/Images/potato_naked.png" x:Name="Hair3_3" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair2_1" RelativePanel.RightOf="Dress2_2"/>
+                <Image Tapped="Hair2_1_Tapped" IsTapEnabled="True" Source="Assets/Images/hiukset/tukka1.png" x:Name="Hair1_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress5_1"/>
+                <Image Tapped="Hair2_1_Tapped" IsTapEnabled="True" Source="Assets/Images/hiukset/tukka1_2.png" x:Name="Hair1_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress5_1" RelativePanel.RightOf="Dress2_1"/>
+                <Image Tapped="Hair2_1_Tapped" IsTapEnabled="True" Source="Assets/Images/hiukset/tukka1_3.png" x:Name="Hair1_3" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress5_1" RelativePanel.RightOf="Dress2_2"/>
 
-                <Image Source="Assets/Images/potato_naked.png" x:Name="Hair4_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair3_1"/>
-                <Image Source="Assets/Images/potato_naked.png" x:Name="Hair4_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair3_1" RelativePanel.RightOf="Dress2_1"/>
-                <Image Source="Assets/Images/potato_naked.png" x:Name="Hair4_3" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair3_1" RelativePanel.RightOf="Dress2_2"/>
+                <Image Tapped="Hair2_1_Tapped" IsTapEnabled="True" Source="Assets/Images/hiukset/tukka2.png" x:Name="Hair2_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair1_1"/>
+                <Image Tapped="Hair2_1_Tapped" IsTapEnabled="True" Source="Assets/Images/hiukset/tukka2_2.png" x:Name="Hair2_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair1_1" RelativePanel.RightOf="Dress2_1"/>
+                <Image Tapped="Hair2_1_Tapped" IsTapEnabled="True" Source="Assets/Images/hiukset/tukka2_3.png" x:Name="Hair2_3" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair1_1" RelativePanel.RightOf="Dress2_2"/>
 
-                <Image Source="Assets/Images/potato_naked.png" x:Name="Hair5_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair4_1"/>
-                <Image Source="Assets/Images/potato_naked.png" x:Name="Hair5_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair4_1" RelativePanel.RightOf="Dress2_1"/>
-                <Image Source="Assets/Images/potato_naked.png" x:Name="Hair5_3" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair4_1" RelativePanel.RightOf="Dress2_2"/>
+                <Image Tapped="Hair2_1_Tapped" IsTapEnabled="True" Source="Assets/Images/hiukset/tukka3.png" x:Name="Hair3_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair2_1"/>
+                <Image Tapped="Hair2_1_Tapped" IsTapEnabled="True" Source="Assets/Images/hiukset/tukka3_2.png" x:Name="Hair3_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair2_1" RelativePanel.RightOf="Dress2_1"/>
+                <Image Tapped="Hair2_1_Tapped" IsTapEnabled="True" Source="Assets/Images/hiukset/tukka3_3.png" x:Name="Hair3_3" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair2_1" RelativePanel.RightOf="Dress2_2"/>
 
-                <Image Source="Assets/Images/potato_naked.png" x:Name="Crown_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair5_1"/>
-                <Image Source="Assets/Images/potato_naked.png" x:Name="Crown_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair5_1" RelativePanel.RightOf="Dress2_1"/>
+                <Image Tapped="Hair2_1_Tapped" IsTapEnabled="True" Source="Assets/Images/hiukset/tukka4.png" x:Name="Hair5_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair3_1"/>
+                <Image Tapped="Hair2_1_Tapped" IsTapEnabled="True" Source="Assets/Images/hiukset/tukka4_2.png" x:Name="Hair5_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair3_1" RelativePanel.RightOf="Dress2_1"/>
+                <Image Tapped="Hair2_1_Tapped" IsTapEnabled="True" Source="Assets/Images/hiukset/tukka4_3.png" x:Name="Hair5_3" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair3_1" RelativePanel.RightOf="Dress2_2"/>
 
-                <Image Source="Assets/Images/potato_naked.png" x:Name="Acce1_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Crown_1" RelativePanel.RightOf="Dress2_2"/>
-                <Image Source="Assets/Images/potato_naked.png" x:Name="Acc1_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Crown_1" RelativePanel.RightOf="Dress2_1"/>
+
+                <Image Tapped="Heart_1_Tapped" IsTapEnabled="True" Source="Assets/Images/assat/sydan.png" x:Name="Heart_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair5_1"/>
+                <Image Tapped="Heart_1_Tapped" IsTapEnabled="True"  Source="Assets/Images/assat/sydan_2.png" x:Name="Heart_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair5_1" RelativePanel.RightOf="Dress2_1"/>
+                <Image Tapped="Heart_1_Tapped" IsTapEnabled="True"  Source="Assets/Images/assat/sydan_3.png" x:Name="Heart_3" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair5_1" RelativePanel.RightOf="Dress2_2"/>
+
+
+
+                <Image Tapped="Crown_1_Tapped" IsTapEnabled="True" Source="Assets/Images/assat/kruunu1.png" x:Name="Crown_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair5_1"/>
+                <Image  Tapped="Crown_2_Tapped" IsTapEnabled="True" Source="Assets/Images/assat/kruunu2.png" x:Name="Crown_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair5_1" RelativePanel.RightOf="Dress2_1"/>
+
+                <Image Source="Assets/Images/assat/suu1.png" x:Name="Acc1_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Crown_1" RelativePanel.RightOf="Dress2_2"/>
+                <Image Source="Assets/Images/assat/suu2.png" x:Name="Acc1_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Crown_1" RelativePanel.RightOf="Dress2_1"/>
 
 
             </RelativePanel>

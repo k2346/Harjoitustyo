@@ -27,23 +27,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
         public GamePage()
         {
             this.InitializeComponent();
-            // try open 800x600 window
-            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
-            ApplicationView.PreferredLaunchViewSize = new Size(800, 600);
-        }
 
-        private void Dress1_1_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            Debug.WriteLine("JEE");
-            Image image = new Image();
-            Image sImage = sender as Image;
-            image.Source = sImage.Source;
-            image.Width = 325;
-           // image.Height = 100;
-            image.IsTapEnabled = true;
-            image.Tapped += Image_Tapped;
-            //image.Margin = 
-            MyGrid.Children.Add(image);
         }
 
         private void Image_Tapped(object sender, TappedRoutedEventArgs e)
@@ -51,6 +35,11 @@ namespace SuperAwesomePotatoPrincessDressingGame
             MyGrid.Children.Remove(sender as Image);
         }
 
+
+
+
+
+        // return button
         private void ReturnButton_Click(object sender, RoutedEventArgs e)
         {
             Frame rootFrame = Window.Current.Content as Frame;
@@ -63,6 +52,268 @@ namespace SuperAwesomePotatoPrincessDressingGame
                 rootFrame.GoBack();
             }
         }
+
+        // Lisätään mekkoja perunan päälle
+        private void Dress1_1_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Debug.WriteLine("JEE");
+            Image image = new Image();
+            Image sImage = sender as Image;
+            image.Source = sImage.Source;
+            image.Width = 700;
+            image.Height = 700;
+            image.Margin = new Thickness(-50, 120, 392, 10);
+            image.IsTapEnabled = true;
+            image.Tapped += Image_Tapped;
+            MyGrid.Children.Add(image);
+        }
+
+        private void Dress1_2_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Debug.WriteLine("JEE");
+            Image image = new Image();
+            Image sImage = sender as Image;
+            image.Source = sImage.Source;
+            image.Width = 700;
+            image.Height = 700;
+            image.Margin = new Thickness(-50, 120, 392, 10);
+            image.IsTapEnabled = true;
+            image.Tapped += Image_Tapped;
+            MyGrid.Children.Add(image);
+        }
+
+        private void Dress1_3_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Debug.WriteLine("JEE");
+            Image image = new Image();
+            Image sImage = sender as Image;
+            image.Source = sImage.Source;
+            image.Width = 700;
+            image.Height = 700;
+            image.Margin = new Thickness(-50, 120, 392, 10);
+            image.IsTapEnabled = true;
+            image.Tapped += Image_Tapped;
+            MyGrid.Children.Add(image);
+        }
+
+        private void Dress2_1_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Debug.WriteLine("JEE");
+            Image image = new Image();
+            Image sImage = sender as Image;
+            image.Source = sImage.Source;
+            image.Width = 700;
+            image.Height = 700;
+            image.Margin = new Thickness(-55, 120, 392, 10);
+            image.IsTapEnabled = true;
+            image.Tapped += Image_Tapped;
+            MyGrid.Children.Add(image);
+        }
+
+        private void Dress2_2_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Debug.WriteLine("JEE");
+            Image image = new Image();
+            Image sImage = sender as Image;
+            image.Source = sImage.Source;
+            image.Width = 700;
+            image.Height = 700;
+            image.Margin = new Thickness(-55, 120, 392, 10);
+            image.IsTapEnabled = true;
+            image.Tapped += Image_Tapped;
+            MyGrid.Children.Add(image);
+        }
+
+        private void Dress2_3_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Debug.WriteLine("JEE");
+            Image image = new Image();
+            Image sImage = sender as Image;
+            image.Source = sImage.Source;
+            image.Width = 700;
+            image.Height = 700;
+            image.Margin = new Thickness(-55, 120, 392, 10);
+            image.IsTapEnabled = true;
+            image.Tapped += Image_Tapped;
+            MyGrid.Children.Add(image);
+        }
+
+        private void Dress3_1_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Debug.WriteLine("JEE");
+            Image image = new Image();
+            Image sImage = sender as Image;
+            image.Source = sImage.Source;
+            image.Width = 700;
+            image.Height = 700;
+            image.Margin = new Thickness(-55, 120, 392, 5);
+            image.IsTapEnabled = true;
+            image.Tapped += Image_Tapped;
+            MyGrid.Children.Add(image);
+        }
+
+        private void Dress3_2_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Debug.WriteLine("JEE");
+            Image image = new Image();
+            Image sImage = sender as Image;
+            image.Source = sImage.Source;
+            image.Width = 700;
+            image.Height = 700;
+            image.Margin = new Thickness(-55, 120, 392, 5);
+            image.IsTapEnabled = true;
+            image.Tapped += Image_Tapped;
+            MyGrid.Children.Add(image);
+        }
+
+        private void Dress3_3_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Debug.WriteLine("JEE");
+            Image image = new Image();
+            Image sImage = sender as Image;
+            image.Source = sImage.Source;
+            image.Width = 700;
+            image.Height = 700;
+            image.Margin = new Thickness(-55, 120, 392, 5);
+            image.IsTapEnabled = true;
+            image.Tapped += Image_Tapped;
+            MyGrid.Children.Add(image);
+        }
+
+        private void Dress4_1_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Debug.WriteLine("JEE");
+            Image image = new Image();
+            Image sImage = sender as Image;
+            image.Source = sImage.Source;
+            image.Width = 700;
+            image.Height = 700;
+            image.Margin = new Thickness(-55, 120, 392, 23);
+            image.IsTapEnabled = true;
+            image.Tapped += Image_Tapped;
+            MyGrid.Children.Add(image);
+        }
+
+        private void Dress4_2_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Debug.WriteLine("JEE");
+            Image image = new Image();
+            Image sImage = sender as Image;
+            image.Source = sImage.Source;
+            image.Width = 700;
+            image.Height = 700;
+            image.Margin = new Thickness(-55, 120, 392, 23);
+            image.IsTapEnabled = true;
+            image.Tapped += Image_Tapped;
+            MyGrid.Children.Add(image);
+        }
+
+        private void Dress4_3_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Debug.WriteLine("JEE");
+            Image image = new Image();
+            Image sImage = sender as Image;
+            image.Source = sImage.Source;
+            image.Width = 700;
+            image.Height = 700;
+            image.Margin = new Thickness(-55, 120, 392, 23);
+            image.IsTapEnabled = true;
+            image.Tapped += Image_Tapped;
+            MyGrid.Children.Add(image);
+        }
+
+        private void Dress5_1_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Debug.WriteLine("JEE");
+            Image image = new Image();
+            Image sImage = sender as Image;
+            image.Source = sImage.Source;
+            image.Width = 700;
+            image.Height = 700;
+            image.Margin = new Thickness(-55, 120, 392, 13);
+            image.IsTapEnabled = true;
+            image.Tapped += Image_Tapped;
+            MyGrid.Children.Add(image);
+        }
+
+        private void Dress5_2_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Debug.WriteLine("JEE");
+            Image image = new Image();
+            Image sImage = sender as Image;
+            image.Source = sImage.Source;
+            image.Width = 700;
+            image.Height = 700;
+            image.Margin = new Thickness(-55, 120, 392, 13);
+            image.IsTapEnabled = true;
+            image.Tapped += Image_Tapped;
+            MyGrid.Children.Add(image);
+        }
+
     
+
+        private void Dress5_3_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Debug.WriteLine("JEE");
+            Image image = new Image();
+            Image sImage = sender as Image;
+            image.Source = sImage.Source;
+            image.Width = 700;
+            image.Height = 700;
+            image.Margin = new Thickness(-55, 120, 392, 13);
+            image.IsTapEnabled = true;
+            image.Tapped += Image_Tapped;
+            MyGrid.Children.Add(image);
+        }
+
+
+// Hiuksien lisäys perunalle
+
+        private void Hair2_1_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Debug.WriteLine("JEE");
+            Image image = new Image();
+            Image sImage = sender as Image;
+            image.Source = sImage.Source;
+            image.Width = 700;
+            image.Height = 700;
+            image.Margin = new Thickness(-55, 120, 392, 13);
+            image.IsTapEnabled = true;
+            image.Tapped += Image_Tapped;
+            MyGrid.Children.Add(image);
+        }
+
+        private void Heart_1_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Debug.WriteLine("JEE");
+            Image image = new Image();
+            Image sImage = sender as Image;
+            image.Source = sImage.Source;
+            image.Width = 700;
+            image.Height = 700;
+            image.Margin = new Thickness(-55, 120, 392, 13);
+            image.IsTapEnabled = true;
+            image.Tapped += Image_Tapped;
+            MyGrid.Children.Add(image);
+        }
+
+        private void Crown_1_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Debug.WriteLine("JEE");
+            Image image = new Image();
+            Image sImage = sender as Image;
+            image.Source = sImage.Source;
+            image.Width = 700;
+            image.Height = 700;
+            image.Margin = new Thickness(-55, 120, 392, 13);
+            image.IsTapEnabled = true;
+            image.Tapped += Image_Tapped;
+            MyGrid.Children.Add(image);
+        }
+
+        private void Crown_2_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+
+        }
     }
 }
