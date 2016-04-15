@@ -101,6 +101,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EmptyPage.xaml.cs">
+      <DependentUpon>EmptyPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GamePage.xaml.cs">
       <DependentUpon>GamePage.xaml</DependentUpon>
     </Compile>
@@ -129,6 +132,7 @@
     <Content Include="Assets\Images\assat\sydan.png" />
     <Content Include="Assets\Images\assat\sydan_2.png" />
     <Content Include="Assets\Images\assat\sydan_3.png" />
+    <Content Include="Assets\Images\musa.mp3" />
     <Content Include="Assets\Images\hiukset\tukka1.png" />
     <Content Include="Assets\Images\hiukset\tukka1_2.png" />
     <Content Include="Assets\Images\hiukset\tukka1_3.png" />
@@ -173,8 +177,11 @@
     <Content Include="Assets\Images\potato_naked.png" />
     <Content Include="Assets\Images\Taustakuva.png" />
     <Content Include="Assets\Images\Taustakuva_game.png" />
+    <Content Include="Assets\Images\Taustakuva_game2.png" />
+    <Content Include="Assets\Images\Taustakuva_game3.png" />
     <Content Include="Assets\Images\Taustakuva_hahmot.png" />
-    <Content Include="Assets\Sounds\bensound-buddy.mp3" />
+    <Content Include="Assets\musa.mp3" />
+    <Content Include="Assets\music.mp3" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -189,6 +196,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="EmptyPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="GamePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -202,7 +213,9 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Assets\Sounds\" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

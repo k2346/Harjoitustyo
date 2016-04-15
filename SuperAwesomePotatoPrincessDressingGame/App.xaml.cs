@@ -79,8 +79,19 @@ namespace SuperAwesomePotatoPrincessDressingGame
             }
             // Ensure the current window is active
             Window.Current.Activate();
+            PlayAudio();
         }
-
+        private async void PlayAudio()
+        {
+            //Debug.WriteLine("PlayAudio");
+            MediaElement mysong = new MediaElement();
+            mysong.IsLooping = true;
+            Windows.Storage.StorageFolder folder = await Package.Current.InstalledLocation.GetFolderAsync("Assets");
+            Windows.Storage.StorageFile file = await folder.GetFileAsync("music.mp3");
+            var stream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
+            mysong.SetSource(stream, file.ContentType);
+            mysong.Play();
+        }
         /// <summary>
         /// Invoked when Navigation to a certain page fails
         /// </summary>

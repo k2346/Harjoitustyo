@@ -8,6 +8,9 @@
         <Color x:Key="Potato_blue">#FF0070A0</Color>
         <Color x:Key="Potato_green">#FF27EAA1</Color>
         <Color x:Key="Potato_pink">#FFF575CE</Color>
+        <Color x:Key="Potato_lila">#FFC3B1F7</Color>
+        <Color x:Key="Potato_dark_lila">#FF8E06E4</Color>
+        <Color x:Key="Potato_yellow">#FFE7DB67</Color>
         
     </Application.Resources>
 

@@ -13,7 +13,7 @@
     <Grid 
         x:Name="MyGrid"
         Background="Black" Margin="10,10,10,0">
-        <Image Source="Assets/Images/Taustakuva_game.png" Width="auto" Height="auto"
+        <Image Source="Assets/Images/Taustakuva_game3.png" Width="auto" Height="auto"
                    HorizontalAlignment="Center" />
         <Image Source="Assets/Images/potato_naked.png"  x:Name="PotatoImage" HorizontalAlignment="Center" Height="640" VerticalAlignment="Center" Width="327" Margin="139,231,514,119"   />
         <!--
@@ -44,7 +44,7 @@
             </Button.Foreground>
         </Button> -->
 
-        <TextBlock x:Name="WardTextBlock" TextWrapping="Wrap" Text="Help Potato to get a stunning outfit!" FontSize="40" FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars" Margin="221,45,220,890">
+        <TextBlock x:Name="WardTextBlock" TextWrapping="Wrap" Text="Help Potato to get a stunning outfit!" FontSize="40" FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars" Margin="101,56,340,879">
             <TextBlock.Foreground>
                 <SolidColorBrush Color="#FF0070A0"/>
             </TextBlock.Foreground>
@@ -98,11 +98,12 @@
 
 
 
-                <Image Tapped="Crown_1_Tapped" IsTapEnabled="True" Source="Assets/Images/assat/kruunu1.png" x:Name="Crown_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair5_1"/>
-                <Image  Tapped="Crown_2_Tapped" IsTapEnabled="True" Source="Assets/Images/assat/kruunu2.png" x:Name="Crown_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair5_1" RelativePanel.RightOf="Dress2_1"/>
+                <Image Tapped="Crown_1_Tapped" IsTapEnabled="True" Source="Assets/Images/assat/kruunu1.png" x:Name="Crown_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Heart_1"/>
+                <Image  Tapped="Crown_2_Tapped" IsTapEnabled="True" Source="Assets/Images/assat/kruunu2.png" x:Name="Crown_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Heart_1" RelativePanel.RightOf="Dress2_1"/>
 
-                <Image Source="Assets/Images/assat/suu1.png" x:Name="Acc1_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Crown_1" RelativePanel.RightOf="Dress2_2"/>
-                <Image Source="Assets/Images/assat/suu2.png" x:Name="Acc1_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Crown_1" RelativePanel.RightOf="Dress2_1"/>
+                <Image Tapped="Crown_1_Tapped" IsTapEnabled="True" Source="Assets/Images/assat/suu1.png" x:Name="Acc1_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Crown_1" RelativePanel.RightOf="Dress2_2"/>
+                <Image Tapped="Crown_1_Tapped" IsTapEnabled="True" Source="Assets/Images/assat/suu2.png" x:Name="Acc1_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Crown_1" RelativePanel.RightOf="Dress2_1"/>
+                <Image Tapped="Acc1_3_Tapped" IsTapEnabled="True" Source="Assets/Images/assat/ripset.png" x:Name="Acc1_3" Height="100" Width="auto" Margin="5" RelativePanel.Below="Crown_1"/>
 
 
             </RelativePanel>

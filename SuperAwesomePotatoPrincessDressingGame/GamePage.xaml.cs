@@ -313,7 +313,30 @@ namespace SuperAwesomePotatoPrincessDressingGame
 
         private void Crown_2_Tapped(object sender, TappedRoutedEventArgs e)
         {
+            Debug.WriteLine("JEE");
+            Image image = new Image();
+            Image sImage = sender as Image;
+            image.Source = sImage.Source;
+            image.Width = 700;
+            image.Height = 700;
+            image.Margin = new Thickness(-55, 120, 392, 13);
+            image.IsTapEnabled = true;
+            image.Tapped += Image_Tapped;
+            MyGrid.Children.Add(image);
+        }
 
+        private void Acc1_3_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Debug.WriteLine("JEE");
+            Image image = new Image();
+            Image sImage = sender as Image;
+            image.Source = sImage.Source;
+            image.Width = 700;
+            image.Height = 700;
+            image.Margin = new Thickness(-57, 123, 392, 13);
+            image.IsTapEnabled = true;
+            image.Tapped += Image_Tapped;
+            MyGrid.Children.Add(image);
         }
     }
 }

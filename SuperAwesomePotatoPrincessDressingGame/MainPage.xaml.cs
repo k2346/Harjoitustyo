@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -27,10 +28,11 @@ namespace SuperAwesomePotatoPrincessDressingGame
         public MainPage()
         {
             this.InitializeComponent();
-            // try open 800x800 window
+            // try open 1000x1000 window
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
             ApplicationView.PreferredLaunchViewSize = new Size(1000, 1000);
 
+         
         }
 
 
@@ -46,12 +48,15 @@ namespace SuperAwesomePotatoPrincessDressingGame
             this.Frame.Navigate(typeof(SavedOutFitsPage));
         }
 
-        //SOUNDBUTTON 
-        private void SoundButton_Click(object sender, RoutedEventArgs e)
-        {
-            WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
+       
+        
 
-               
-        }
+        //SOUNDBUTTON 
+        // private void SoundButton_Click(object sender, RoutedEventArgs e)
+        //  {
+        //     WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
+
+
+        //   }
     }
 }
