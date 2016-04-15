@@ -26,9 +26,9 @@ namespace SuperAwesomePotatoPrincessDressingGame
         public SavedOutFitsPage()
         {
             this.InitializeComponent();
-            // try open 800x600 window
+            // try open 1000x1000 window
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
-            ApplicationView.PreferredLaunchViewSize = new Size(800, 600);
+            ApplicationView.PreferredLaunchViewSize = new Size(1000, 1000);
         }
 
         private void LeftButton_Click(object sender, RoutedEventArgs e)
