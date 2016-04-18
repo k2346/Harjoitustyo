@@ -11,11 +11,12 @@
     >
 
     <Grid 
-        x:Name="MyGrid"
+        x:Name="MyGrid02"
         Background="Black" Margin="10,10,10,0">
         <Image Source="Assets/Images/Taustakuva_game3.png" Width="auto" Height="auto"
                    HorizontalAlignment="Center" />
-        <Image Source="Assets/Images/potato_naked.png"  x:Name="PotatoImage" HorizontalAlignment="Center" Height="640" VerticalAlignment="Center" Width="327" Margin="139,231,514,119"   />
+
+
         <!--
         <StackPanel HorizontalAlignment="Left" Height="640" Margin="10,70,0,0" VerticalAlignment="Top" Width="425">
             <Image Source="Assets/Images/potato_naked.png"  x:Name="PotatoImage" HorizontalAlignment="Center" Height="640" VerticalAlignment="Center" Width="327" Margin="45,0,53,0"   />
@@ -115,6 +116,22 @@
 
 
         </ScrollViewer>
+        <Canvas x:Name="MyGrid" HorizontalAlignment="Left" Height="771" Margin="0,116,0,0" VerticalAlignment="Top" Width="623">
+            <Image Source="Assets/Images/potato_naked.png"  x:Name="PotatoImage" HorizontalAlignment="Center" Height="640" VerticalAlignment="Center" Width="327" Canvas.Left="107" Canvas.Top="123"   />
+            
+            
+        </Canvas>
+
+        <Button x:Name="saveButton" Content="Save your outfit" Padding="10" Margin="198,908,659,38" HorizontalAlignment="Center"  FontSize="17" Click="saveButton_Click" FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars" Background="#02000000">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{StaticResource Potato_yellow}"/>
+            </Button.BorderBrush>
+
+            <Button.Foreground>
+                <SolidColorBrush Color="{StaticResource Potato_blue}"/>
+            </Button.Foreground>
+        </Button>
+       
 
     </Grid>
 </Page>
