@@ -9,6 +9,7 @@
     Width="1000"
     Height="1000"
     >
+
     <Page.Resources>
         <Color x:Key="Potato_lila">#FFC3B1F7</Color>
         <Color x:Key="Potato_dark_lila">#FF8E06E4</Color>
@@ -60,8 +61,8 @@
             </Button>
 
         </StackPanel>
-        
-       <!-- <Button x:Name="SoundButton"
+        <!--
+        <Button x:Name="SoundButton"
                 Content="Sound"
                 Padding="10" 
                 FontSize="27" 
@@ -78,6 +79,7 @@
                 <SolidColorBrush Color="{StaticResource Potato_blue}"/>
             </Button.Foreground>
         </Button> -->
+
 
 
 

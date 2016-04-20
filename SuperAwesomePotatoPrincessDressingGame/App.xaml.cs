@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -79,7 +80,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
             }
             // Ensure the current window is active
             Window.Current.Activate();
-            PlayAudio();
+            //PlayAudio();
         }
         private async void PlayAudio()
         {
