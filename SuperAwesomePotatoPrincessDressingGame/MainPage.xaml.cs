@@ -32,13 +32,13 @@ namespace SuperAwesomePotatoPrincessDressingGame
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
             ApplicationView.PreferredLaunchViewSize = new Size(1000, 1000);
 
-         
+
         }
 
 
         private void PlayButton_Click(object sender, RoutedEventArgs e)
         {
-            
+
             this.Frame.Navigate(typeof(GamePage));
         }
 
@@ -55,13 +55,13 @@ namespace SuperAwesomePotatoPrincessDressingGame
 
 
 
-
         //SOUNDBUTTON 
-        // private void SoundButton_Click(object sender, RoutedEventArgs e)
-        //  {
-        //     WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
+        private void SoundButton_Click(object sender, RoutedEventArgs e)
+        {
 
+            WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
+     
+        }
 
-        //   }
     }
 }
