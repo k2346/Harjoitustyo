@@ -80,7 +80,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Source = sImage.Source;
             image.Width = 700;
             image.Height = 700;
-            image.Margin = new Thickness(-50, 120, 392, 10);
+            image.Margin = new Thickness(-87, 85, 392, 10);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
             MyGrid.Children.Add(image);
@@ -94,7 +94,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Source = sImage.Source;
             image.Width = 700;
             image.Height = 700;
-            image.Margin = new Thickness(-50, 120, 392, 10);
+            image.Margin = new Thickness(-87, 85, 392, 10);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
             MyGrid.Children.Add(image);
@@ -108,7 +108,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Source = sImage.Source;
             image.Width = 700;
             image.Height = 700;
-            image.Margin = new Thickness(-50, 120, 392, 10);
+            image.Margin = new Thickness(-87, 85, 392, 10);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
             MyGrid.Children.Add(image);
@@ -122,7 +122,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Source = sImage.Source;
             image.Width = 700;
             image.Height = 700;
-            image.Margin = new Thickness(-55, 120, 392, 10);
+            image.Margin = new Thickness(-88, 92, 392, 10);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
             MyGrid.Children.Add(image);
@@ -136,7 +136,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Source = sImage.Source;
             image.Width = 700;
             image.Height = 700;
-            image.Margin = new Thickness(-55, 120, 392, 10);
+            image.Margin = new Thickness(-88, 92, 392, 10);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
             MyGrid.Children.Add(image);
@@ -150,7 +150,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Source = sImage.Source;
             image.Width = 700;
             image.Height = 700;
-            image.Margin = new Thickness(-55, 120, 392, 10);
+            image.Margin = new Thickness(-88, 92, 392, 10);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
             MyGrid.Children.Add(image);
@@ -164,7 +164,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Source = sImage.Source;
             image.Width = 700;
             image.Height = 700;
-            image.Margin = new Thickness(-55, 120, 392, 5);
+            image.Margin = new Thickness(-89, 95, 392, 5);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
             MyGrid.Children.Add(image);
@@ -178,7 +178,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Source = sImage.Source;
             image.Width = 700;
             image.Height = 700;
-            image.Margin = new Thickness(-55, 120, 392, 5);
+            image.Margin = new Thickness(-89, 95, 392, 5);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
             MyGrid.Children.Add(image);
@@ -192,7 +192,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Source = sImage.Source;
             image.Width = 700;
             image.Height = 700;
-            image.Margin = new Thickness(-55, 120, 392, 5);
+            image.Margin = new Thickness(-89, 95, 392, 5);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
             MyGrid.Children.Add(image);
@@ -206,7 +206,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Source = sImage.Source;
             image.Width = 700;
             image.Height = 700;
-            image.Margin = new Thickness(-55, 120, 392, 23);
+            image.Margin = new Thickness(-87, 85, 392, 23);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
             MyGrid.Children.Add(image);
@@ -220,7 +220,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Source = sImage.Source;
             image.Width = 700;
             image.Height = 700;
-            image.Margin = new Thickness(-55, 120, 392, 23);
+            image.Margin = new Thickness(-87, 85, 392, 23);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
             MyGrid.Children.Add(image);
@@ -234,7 +234,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Source = sImage.Source;
             image.Width = 700;
             image.Height = 700;
-            image.Margin = new Thickness(-55, 120, 392, 23);
+            image.Margin = new Thickness(-87, 85, 392, 23);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
             MyGrid.Children.Add(image);
@@ -248,7 +248,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Source = sImage.Source;
             image.Width = 700;
             image.Height = 700;
-            image.Margin = new Thickness(-55, 120, 392, 13);
+            image.Margin = new Thickness(-87, 85, 392, 13);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
             MyGrid.Children.Add(image);
@@ -262,7 +262,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Source = sImage.Source;
             image.Width = 700;
             image.Height = 700;
-            image.Margin = new Thickness(-55, 120, 392, 13);
+            image.Margin = new Thickness(-87, 85, 392, 13);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
             MyGrid.Children.Add(image);
@@ -278,7 +278,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Source = sImage.Source;
             image.Width = 700;
             image.Height = 700;
-            image.Margin = new Thickness(-55, 120, 392, 13);
+            image.Margin = new Thickness(-87, 85, 392, 13);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
             MyGrid.Children.Add(image);
@@ -295,7 +295,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Source = sImage.Source;
             image.Width = 700;
             image.Height = 700;
-            image.Margin = new Thickness(-55, 120, 392, 13);
+            image.Margin = new Thickness(-65, 100, 392, 13);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
             MyGrid.Children.Add(image);
