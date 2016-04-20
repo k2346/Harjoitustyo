@@ -48,8 +48,13 @@ namespace SuperAwesomePotatoPrincessDressingGame
             this.Frame.Navigate(typeof(SavedOutFitsPage));
         }
 
-       
-        
+        private void QuitButton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Exit();
+        }
+
+
+
 
         //SOUNDBUTTON 
         // private void SoundButton_Click(object sender, RoutedEventArgs e)

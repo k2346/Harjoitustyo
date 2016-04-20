@@ -42,9 +42,15 @@
                     <SolidColorBrush Color="{StaticResource Potato_blue}"/>
                 </Button.Foreground>
             </Button>
-            <Button x:Name="QuitButton" Content="Quit" Padding="10" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center" 
+            <Button x:Name="QuitButton"
+                    Content="Quit" 
+                    Padding="10" Margin="20"
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" 
                     FontSize="17" 
-                    FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars" Background="#02000000">
+                    FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars" 
+                    Background="#02000000"
+                    Click="QuitButton_Click">
                 <Button.BorderBrush>
                     <SolidColorBrush Color="{StaticResource Potato_yellow}"/>
                 </Button.BorderBrush>
@@ -54,6 +60,7 @@
             </Button>
 
         </StackPanel>
+        
        <!-- <Button x:Name="SoundButton"
                 Content="Sound"
                 Padding="10" 
