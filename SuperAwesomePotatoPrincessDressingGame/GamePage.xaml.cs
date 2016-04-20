@@ -35,7 +35,8 @@ namespace SuperAwesomePotatoPrincessDressingGame
     public sealed partial class GamePage : Page
     
     {
- 
+        private bool IsDress = false;
+        private bool IsHair = false;
 
         private object NotifyType;
 
@@ -48,13 +49,22 @@ namespace SuperAwesomePotatoPrincessDressingGame
 
         }
 
-        private void Image_Tapped(object sender, TappedRoutedEventArgs e)
+       private void Image_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            MyGrid.Children.Remove(sender as Image);
+            Image image = sender as Image;
+            Debug.WriteLine(image.Name);
+            if (image.Name.Equals("Dress"))
+            {
+                IsDress = false;
+            }
+            else if (image.Name.Equals("Hair"))
+            {
+                IsHair = false;
+            }
+
+             MyGrid.Children.Remove(sender as Image);    
+            
         }
-
-
-
 
 
         // return button
@@ -74,20 +84,27 @@ namespace SuperAwesomePotatoPrincessDressingGame
         // Lisätään mekkoja perunan päälle
         private void Dress1_1_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            Debug.WriteLine("JEE");
-            Image image = new Image();
-            Image sImage = sender as Image;
-            image.Source = sImage.Source;
-            image.Width = 700;
-            image.Height = 700;
-            image.Margin = new Thickness(-87, 85, 392, 10);
-            image.IsTapEnabled = true;
-            image.Tapped += Image_Tapped;
-            MyGrid.Children.Add(image);
+            if (IsDress == false)
+            {
+                Debug.WriteLine("JEE");
+                Image image = new Image();
+                Image sImage = sender as Image;
+                image.Source = sImage.Source;
+                image.Width = 700;
+                image.Height = 700;
+                image.Margin = new Thickness(-87, 85, 392, 10);
+                image.IsTapEnabled = true;
+                image.Tapped += Image_Tapped;
+                image.Name = "Dress";
+                MyGrid.Children.Add(image);
+                IsDress = true;
+            }
         }
 
         private void Dress1_2_Tapped(object sender, TappedRoutedEventArgs e)
         {
+            if (IsDress == false)
+            {
             Debug.WriteLine("JEE");
             Image image = new Image();
             Image sImage = sender as Image;
@@ -97,11 +114,15 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Margin = new Thickness(-87, 85, 392, 10);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
+            image.Name = "Dress";
             MyGrid.Children.Add(image);
+            IsDress = true;
+            }
         }
 
         private void Dress1_3_Tapped(object sender, TappedRoutedEventArgs e)
         {
+            if (IsDress == false) {
             Debug.WriteLine("JEE");
             Image image = new Image();
             Image sImage = sender as Image;
@@ -111,11 +132,16 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Margin = new Thickness(-87, 85, 392, 10);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
+            image.Name = "Dress";
             MyGrid.Children.Add(image);
+            IsDress = true;
+            }
         }
 
         private void Dress2_1_Tapped(object sender, TappedRoutedEventArgs e)
         {
+            if (IsDress == false)
+            {
             Debug.WriteLine("JEE");
             Image image = new Image();
             Image sImage = sender as Image;
@@ -125,11 +151,16 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Margin = new Thickness(-88, 92, 392, 10);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
+            image.Name = "Dress";
             MyGrid.Children.Add(image);
+            IsDress = true;
+            }
         }
 
         private void Dress2_2_Tapped(object sender, TappedRoutedEventArgs e)
         {
+            if (IsDress == false)
+            {
             Debug.WriteLine("JEE");
             Image image = new Image();
             Image sImage = sender as Image;
@@ -139,11 +170,16 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Margin = new Thickness(-88, 92, 392, 10);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
+            image.Name = "Dress";
             MyGrid.Children.Add(image);
+            IsDress = true;
+            }
         }
 
         private void Dress2_3_Tapped(object sender, TappedRoutedEventArgs e)
         {
+            if (IsDress == false)
+            {
             Debug.WriteLine("JEE");
             Image image = new Image();
             Image sImage = sender as Image;
@@ -153,11 +189,16 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Margin = new Thickness(-88, 92, 392, 10);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
+            image.Name = "Dress";
             MyGrid.Children.Add(image);
+            IsDress = true;
+            }
         }
 
         private void Dress3_1_Tapped(object sender, TappedRoutedEventArgs e)
         {
+            if (IsDress == false)
+            {
             Debug.WriteLine("JEE");
             Image image = new Image();
             Image sImage = sender as Image;
@@ -167,11 +208,16 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Margin = new Thickness(-89, 95, 392, 5);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
+            image.Name = "Dress";
             MyGrid.Children.Add(image);
+            IsDress = true;
+            }
         }
 
         private void Dress3_2_Tapped(object sender, TappedRoutedEventArgs e)
         {
+            if (IsDress == false)
+            {
             Debug.WriteLine("JEE");
             Image image = new Image();
             Image sImage = sender as Image;
@@ -181,12 +227,17 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Margin = new Thickness(-89, 95, 392, 5);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
+            image.Name = "Dress";
             MyGrid.Children.Add(image);
+            IsDress = true;
+            }
         }
 
         private void Dress3_3_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            Debug.WriteLine("JEE");
+            if (IsDress == false)
+            {
+                Debug.WriteLine("JEE");
             Image image = new Image();
             Image sImage = sender as Image;
             image.Source = sImage.Source;
@@ -195,11 +246,16 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Margin = new Thickness(-89, 95, 392, 5);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
+            image.Name = "Dress";
             MyGrid.Children.Add(image);
+            IsDress = true;
+            }
         }
 
         private void Dress4_1_Tapped(object sender, TappedRoutedEventArgs e)
         {
+            if (IsDress == false)
+            {
             Debug.WriteLine("JEE");
             Image image = new Image();
             Image sImage = sender as Image;
@@ -209,12 +265,17 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Margin = new Thickness(-87, 85, 392, 23);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
+            image.Name = "Dress";
             MyGrid.Children.Add(image);
+            IsDress = true;
+            }
         }
 
         private void Dress4_2_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            Debug.WriteLine("JEE");
+            if (IsDress == false)
+            {
+                Debug.WriteLine("JEE");
             Image image = new Image();
             Image sImage = sender as Image;
             image.Source = sImage.Source;
@@ -223,12 +284,17 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Margin = new Thickness(-87, 85, 392, 23);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
+            image.Name = "Dress";
             MyGrid.Children.Add(image);
+            IsDress = true;
+            }
         }
 
         private void Dress4_3_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            Debug.WriteLine("JEE");
+            if (IsDress == false)
+            {
+                Debug.WriteLine("JEE");
             Image image = new Image();
             Image sImage = sender as Image;
             image.Source = sImage.Source;
@@ -237,11 +303,16 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Margin = new Thickness(-87, 85, 392, 23);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
+            image.Name = "Dress";
             MyGrid.Children.Add(image);
+            IsDress = true;
+            }
         }
 
         private void Dress5_1_Tapped(object sender, TappedRoutedEventArgs e)
         {
+            if (IsDress == false)
+            {
             Debug.WriteLine("JEE");
             Image image = new Image();
             Image sImage = sender as Image;
@@ -251,11 +322,16 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Margin = new Thickness(-87, 85, 392, 13);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
+            image.Name = "Dress";
             MyGrid.Children.Add(image);
+            IsDress = true;
+            }
         }
 
         private void Dress5_2_Tapped(object sender, TappedRoutedEventArgs e)
         {
+            if (IsDress == false)
+            {
             Debug.WriteLine("JEE");
             Image image = new Image();
             Image sImage = sender as Image;
@@ -265,13 +341,18 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Margin = new Thickness(-87, 85, 392, 13);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
+            image.Name = "Dress";
             MyGrid.Children.Add(image);
+            IsDress = true;
+            }
         }
 
 
 
         private void Dress5_3_Tapped(object sender, TappedRoutedEventArgs e)
         {
+            if (IsDress == false)
+            {
             Debug.WriteLine("JEE");
             Image image = new Image();
             Image sImage = sender as Image;
@@ -281,7 +362,10 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Margin = new Thickness(-87, 85, 392, 13);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
+            image.Name = "Dress";
             MyGrid.Children.Add(image);
+            IsDress = true;
+            }
         }
 
 
@@ -289,16 +373,21 @@ namespace SuperAwesomePotatoPrincessDressingGame
 
         private void Hair2_1_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            Debug.WriteLine("JEE");
-            Image image = new Image();
-            Image sImage = sender as Image;
-            image.Source = sImage.Source;
-            image.Width = 700;
-            image.Height = 700;
-            image.Margin = new Thickness(-65, 100, 392, 13);
-            image.IsTapEnabled = true;
-            image.Tapped += Image_Tapped;
-            MyGrid.Children.Add(image);
+            if (IsHair == false)
+            {
+                Debug.WriteLine("JEE");
+                Image image = new Image();
+                Image sImage = sender as Image;
+                image.Source = sImage.Source;
+                image.Width = 700;
+                image.Height = 700;
+                image.Margin = new Thickness(-88, 95, 392, 13);
+                image.IsTapEnabled = true;
+                image.Tapped += Image_Tapped;
+                image.Name = "Hair";
+                MyGrid.Children.Add(image);
+                IsHair = true;
+            }
         }
 
         private void Heart_1_Tapped(object sender, TappedRoutedEventArgs e)
@@ -309,7 +398,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Source = sImage.Source;
             image.Width = 700;
             image.Height = 700;
-            image.Margin = new Thickness(-55, 120, 392, 13);
+            image.Margin = new Thickness(-88, 90, 392, 13);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
             MyGrid.Children.Add(image);
@@ -323,7 +412,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Source = sImage.Source;
             image.Width = 700;
             image.Height = 700;
-            image.Margin = new Thickness(-55, 120, 392, 13);
+            image.Margin = new Thickness(-88, 93, 392, 13);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
             MyGrid.Children.Add(image);
@@ -337,7 +426,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Source = sImage.Source;
             image.Width = 700;
             image.Height = 700;
-            image.Margin = new Thickness(-55, 120, 392, 13);
+            image.Margin = new Thickness(-85, 93, 392, 13);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
             MyGrid.Children.Add(image);
@@ -351,7 +440,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Source = sImage.Source;
             image.Width = 700;
             image.Height = 700;
-            image.Margin = new Thickness(-57, 123, 392, 13);
+            image.Margin = new Thickness(-88, 92, 392, 13);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
             MyGrid.Children.Add(image);
