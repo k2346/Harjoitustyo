@@ -25,7 +25,7 @@
 
         <!--
         TÄMÄ EI TOIMI, AIHEUTTAA GAME PAGEN VIRHEEN
-        TESTAILE TOIMIVAKSI
+        TESTAILE TOIMIVAKSI -->
         <Button x:Name="ReturnButton"
                 Content="Return"
                 Padding="10" 
@@ -35,7 +35,7 @@
                 Click="ReturnButton_Click" 
                 FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars"
                 Background="#02000000">
-            
+
             <Button.BorderBrush>
                 <SolidColorBrush Color="{StaticResource Potato_yellow}"/>
             </Button.BorderBrush>
@@ -43,7 +43,7 @@
             <Button.Foreground>
                 <SolidColorBrush Color="{StaticResource Potato_blue}"/>
             </Button.Foreground>
-        </Button> -->
+        </Button>
 
         <TextBlock x:Name="WardTextBlock" TextWrapping="Wrap" Text="Help Potato to get a stunning outfit!" FontSize="40" FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars" Margin="101,56,340,879">
             <TextBlock.Foreground>
