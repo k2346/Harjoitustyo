@@ -29,19 +29,41 @@ using Windows.Storage.Streams;
 
 namespace SuperAwesomePotatoPrincessDressingGame
 {
+    //tämä tekee aikaleiman tallennettavan tiedoston perään, että siitä saadaan uniikki
+    public static class MyExtensions
+    {
+        public static string AppendTimeStamp(this string fileName)
+        {
+            return string.Concat(
+                System.IO.Path.GetFileNameWithoutExtension(fileName),
+                DateTime.Now.ToString("yyyyMMddHHmmssfff"),
+                System.IO.Path.GetExtension(fileName)
+                );
+        }
+    }
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
     public sealed partial class GamePage : Page
+
+
     
     {
+
+        //tallentaminen
+        // define storage file
+        
+        Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+
+
         private bool IsDress = false;
         private bool IsHair = false;
 
-        private object NotifyType;
-
         public object PixelFormats { get; private set; }
         public UIElement RenderedCanvas { get; private set; }
+
+
+
 
         public GamePage()
         {
@@ -457,44 +479,33 @@ namespace SuperAwesomePotatoPrincessDressingGame
         {
 
 
-   
-
             // Render to an image at the current system scale and retrieve pixel contents
             RenderTargetBitmap renderTargetBitmap = new RenderTargetBitmap();
             await renderTargetBitmap.RenderAsync(RenderedCanvas);
             var pixelBuffer = await renderTargetBitmap.GetPixelsAsync();
-
-            var savePicker = new FileSavePicker();
-            savePicker.DefaultFileExtension = ".png";
-            savePicker.FileTypeChoices.Add(".png", new List<string> { ".png" });
-            savePicker.SuggestedStartLocation = PickerLocationId.PicturesLibrary;
-            savePicker.SuggestedFileName = "PotatoPrincess.png";
-
-            // Prompt the user to select a file
-            var saveFile = await savePicker.PickSaveFileAsync();
-
-            // Verify the user selected a file
-            if (saveFile == null)
-                return;
+            // tallennetaan kuva nimellä potato ja lisätään perään yksilöivä timestamp
+            var saveFile = await storageFolder.CreateFileAsync("potato.png".AppendTimeStamp(), Windows.Storage.CreationCollisionOption.OpenIfExists);
 
             // Encode the image to the selected file on disk
             using (var fileStream = await saveFile.OpenAsync(FileAccessMode.ReadWrite))
-            {
+            {  
                 var encoder = await BitmapEncoder.CreateAsync(BitmapEncoder.PngEncoderId, fileStream);
 
                 encoder.SetPixelData(
-                    BitmapPixelFormat.Bgra8,
-                    BitmapAlphaMode.Ignore,
-                    (uint)renderTargetBitmap.PixelWidth,
-                    (uint)renderTargetBitmap.PixelHeight,
-                    DisplayInformation.GetForCurrentView().LogicalDpi,
-                    DisplayInformation.GetForCurrentView().LogicalDpi,
-                    pixelBuffer.ToArray());
-
+                BitmapPixelFormat.Bgra8,
+                BitmapAlphaMode.Ignore,
+                (uint)renderTargetBitmap.PixelWidth,
+                (uint)renderTargetBitmap.PixelHeight,
+                DisplayInformation.GetForCurrentView().LogicalDpi,
+                DisplayInformation.GetForCurrentView().LogicalDpi,
+                pixelBuffer.ToArray());
                 await encoder.FlushAsync();
             }
 
-          //  GamePage.NotifyUser("File saved!", NotifyType.StatusMessage); // TÄHÄN JOKU JUTTU JOKA TEKEE TEXTBLOCKKIIN TEKSTIN, ETTÄ KUVA TALLENNETTU
+            // Kerrotaan käyttäjälle, että tallennus onnistui
+            infoTextBlock.Text = "Your Potato Princess has been saved!";
+
+            
         }
 
     }

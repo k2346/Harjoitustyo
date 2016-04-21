@@ -19,20 +19,25 @@
     </Page.Resources>
 
     <Grid Background="Black">
+       
         <Image Source="Assets/Images/Taustakuva.png" Width="1000" Height="1000"
                    HorizontalAlignment="Center" />
-        <StackPanel  VerticalAlignment="Center"
-                     HorizontalAlignment="Center" 
-                     Height="314"
-                     Width="303" 
-                     >
-            <Image Source="Assets/Images/potato_naked.png"  
-        		x:Name="PotatoImage" 
-        		HorizontalAlignment="Center" 
-        		VerticalAlignment="Center" 
-        		Height="314" Width="276"
-                   />
-        </StackPanel>
+
+        
+            
+                <FlipView x:Name="savedView" HorizontalAlignment="Center" VerticalAlignment="Center" Width="600" Height="600">
+
+            <FlipView.ItemTemplate>
+                <DataTemplate>
+                    <Image Source="{Binding}" Stretch="UniformToFill"/>
+                </DataTemplate>
+            </FlipView.ItemTemplate>
+
+        </FlipView>
+           
+
+      
+    
         <Button x:Name="LeftButton"
                     Content="Left"
                     HorizontalAlignment="Left"
@@ -116,6 +121,7 @@
 
 
         </TextBlock>
+        <ScrollViewer HorizontalAlignment="Left" Height="100" Margin="508,744,0,0" VerticalAlignment="Top" Width="100"/>
 
 
 

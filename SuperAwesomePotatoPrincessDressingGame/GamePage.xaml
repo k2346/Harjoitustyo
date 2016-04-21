@@ -118,11 +118,11 @@
         </ScrollViewer>
         <Canvas x:Name="MyGrid" HorizontalAlignment="Left" Height="771" Margin="0,116,0,0" VerticalAlignment="Top" Width="623">
             <Image Source="Assets/Images/potato_naked.png"  x:Name="PotatoImage" HorizontalAlignment="Center" Height="640" VerticalAlignment="Center" Width="327" Canvas.Left="107" Canvas.Top="123"   />
-            
-            
+
+
         </Canvas>
 
-        <Button x:Name="saveButton" Content="Save your outfit" Padding="10" Margin="198,908,659,38" HorizontalAlignment="Center"  FontSize="17" Click="saveButton_Click" FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars" Background="#02000000">
+        <Button x:Name="saveButton" Content="Save your outfit" Padding="10" Margin="198,924,659,22" HorizontalAlignment="Center"  FontSize="17" Click="saveButton_Click" FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars" Background="#02000000">
             <Button.BorderBrush>
                 <SolidColorBrush Color="{StaticResource Potato_yellow}"/>
             </Button.BorderBrush>
@@ -131,7 +131,13 @@
                 <SolidColorBrush Color="{StaticResource Potato_blue}"/>
             </Button.Foreground>
         </Button>
-       
+        <TextBlock x:Name="infoTextBlock" HorizontalAlignment="Left" Margin="49,817,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="472"
+                    FontSize="30" FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars" Height="36" TextAlignment="Center">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="#FF27EAA1"/>
+            </TextBlock.Foreground>
+        </TextBlock>
+
 
     </Grid>
 </Page>
