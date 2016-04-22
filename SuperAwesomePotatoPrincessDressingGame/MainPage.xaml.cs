@@ -60,7 +60,8 @@ namespace SuperAwesomePotatoPrincessDressingGame
         {
 
             WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
-     
+            wplayer.URL = "Assets/musa.mp3";
+
         }
 
     }

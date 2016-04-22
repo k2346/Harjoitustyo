@@ -214,6 +214,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\Sounds\" />
+    <Folder Include="Microsoft\VisualBasic\" />
     <Folder Include="System\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
