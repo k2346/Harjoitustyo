@@ -114,7 +114,6 @@
     <Compile Include="SavedOutFitsPage.xaml.cs">
       <DependentUpon>SavedOutFitsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="System\Media.cs" />
     <Compile Include="WMPLib\WindowsMediaPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -215,6 +214,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\Sounds\" />
+    <Folder Include="System\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
