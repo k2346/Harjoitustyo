@@ -58,6 +58,8 @@ namespace SuperAwesomePotatoPrincessDressingGame
 
         private bool IsDress = false;
         private bool IsHair = false;
+        private bool IsCrown = false;
+        private bool IsLips = false;
 
         public object PixelFormats { get; private set; }
         public UIElement RenderedCanvas { get; private set; }
@@ -83,8 +85,15 @@ namespace SuperAwesomePotatoPrincessDressingGame
             {
                 IsHair = false;
             }
-
-             MyGrid.Children.Remove(sender as Image);    
+            else if (image.Name.Equals("Crown"))
+            {
+                IsCrown = false;
+            }
+            else if (image.Name.Equals("Lips"))
+            {
+                IsLips = false;
+            }
+            MyGrid.Children.Remove(sender as Image);    
             
         }
 
@@ -438,6 +447,9 @@ namespace SuperAwesomePotatoPrincessDressingGame
 
         private void Crown_1_Tapped(object sender, TappedRoutedEventArgs e)
         {
+            if (IsCrown == false)
+            {
+
             Debug.WriteLine("JEE");
             Image image = new Image();
             Image sImage = sender as Image;
@@ -447,11 +459,16 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Margin = new Thickness(-88, 93, 392, 13);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
+            image.Name = "Crown";
             MyGrid.Children.Add(image);
+            IsCrown = true;
+            }
         }
 
         private void Crown_2_Tapped(object sender, TappedRoutedEventArgs e)
         {
+            if (IsCrown == false)
+            {
             Debug.WriteLine("JEE");
             Image image = new Image();
             Image sImage = sender as Image;
@@ -461,7 +478,10 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Margin = new Thickness(-85, 93, 392, 13);
             image.IsTapEnabled = true;
             image.Tapped += Image_Tapped;
+            image.Name = "Crown";
             MyGrid.Children.Add(image);
+            IsCrown = true;
+            }
         }
 
         private void Acc1_3_Tapped(object sender, TappedRoutedEventArgs e)
@@ -477,6 +497,24 @@ namespace SuperAwesomePotatoPrincessDressingGame
             image.Tapped += Image_Tapped;
             MyGrid.Children.Add(image);
         }
+            private void Lips_1_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            if (IsLips == false)
+            {
+            Debug.WriteLine("JEE");
+            Image image = new Image();
+            Image sImage = sender as Image;
+            image.Source = sImage.Source;
+            image.Width = 700;
+            image.Height = 700;
+            image.Margin = new Thickness(-85, 91, 392, 13);
+            image.IsTapEnabled = true;
+            image.Tapped += Image_Tapped;
+            image.Name = "Lips";
+            MyGrid.Children.Add(image);
+            IsLips = true;
+        }
+    }
 
         //Koodia valmiin perunan tallentamiseen
         //EI TOIMI VIELÄ OIKEIN, OTTAA KUVAN KOKO HÖSKÄSTÄ EIKÄ VAAN CANVASISTA
