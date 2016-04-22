@@ -56,9 +56,14 @@
                 <SolidColorBrush Color="{StaticResource Potato_blue}"/>
             </ScrollViewer.BorderBrush>
             <RelativePanel>
-                <Image Tapped="Dress1_1_Tapped" IsTapEnabled="True" Source="Assets/Images/mekot/mekko1.png" x:Name="Dress1_1" Height="100" Width="auto" Margin="5"/>
-                <Image Tapped="Dress1_2_Tapped" IsTapEnabled="True" Source="Assets/Images/mekot/mekko1_2.png" x:Name="Dress1_2" Height="100" Width="auto" Margin="5" RelativePanel.RightOf="Dress1_1"/>
-                <Image Tapped="Dress1_3_Tapped" IsTapEnabled="True" Source="Assets/Images/mekot/mekko1_3.png" x:Name="Dress1_3" Height="100" Width="auto" Margin="5" RelativePanel.RightOf="Dress1_2"/>
+                <TextBlock x:Name="WardTextBlock1" TextWrapping="Wrap" Text="At first pick a dress" FontSize="20" FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars" Margin="101,56,340,5">
+                    <TextBlock.Foreground>
+                        <SolidColorBrush Color="#FF0070A0"/>
+                    </TextBlock.Foreground>
+                </TextBlock>
+                <Image Tapped="Dress1_1_Tapped" IsTapEnabled="True" Source="Assets/Images/mekot/mekko1.png" x:Name="Dress1_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="WardTextBlock1"/>
+                <Image Tapped="Dress1_2_Tapped" IsTapEnabled="True" Source="Assets/Images/mekot/mekko1_2.png" x:Name="Dress1_2" Height="100" Width="auto" Margin="5" RelativePanel.RightOf="Dress1_1" RelativePanel.Below="WardTextBlock1"/>
+                <Image Tapped="Dress1_3_Tapped" IsTapEnabled="True" Source="Assets/Images/mekot/mekko1_3.png" x:Name="Dress1_3" Height="100" Width="auto" Margin="5" RelativePanel.RightOf="Dress1_2" RelativePanel.Below="WardTextBlock1"/>
 
                 <Image Tapped="Dress2_1_Tapped" IsTapEnabled="True" Source="Assets/Images/mekot/mekko2.png" x:Name="Dress2_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress1_1"/>
                 <Image Tapped="Dress2_2_Tapped" IsTapEnabled="True" Source="Assets/Images/mekot/mekko2_2.png" x:Name="Dress2_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress1_1" RelativePanel.RightOf="Dress2_1"/>
@@ -75,10 +80,16 @@
                 <Image Tapped="Dress5_1_Tapped" IsTapEnabled="True" Source="Assets/Images/mekot/mekko5.png" x:Name="Dress5_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress4_1"/>
                 <Image Tapped="Dress5_2_Tapped" IsTapEnabled="True" Source="Assets/Images/mekot/mekko5_2.png" x:Name="Dress5_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress4_1" RelativePanel.RightOf="Dress2_1"/>
                 <Image Tapped="Dress5_3_Tapped" IsTapEnabled="True" Source="Assets/Images/mekot/mekko5_3.png" x:Name="Dress5_3" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress4_1" RelativePanel.RightOf="Dress2_2"/>
+               
+                <TextBlock x:Name="WardTextBlock2" TextWrapping="Wrap" Text="Then pick a hair" FontSize="20" FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars" Margin="101,650,340,5">
+                    <TextBlock.Foreground>
+                        <SolidColorBrush Color="#FF0070A0"/>
+                    </TextBlock.Foreground>
+                </TextBlock>
 
-                <Image Tapped="Hair2_1_Tapped" IsTapEnabled="True" Source="Assets/Images/hiukset/tukka1.png" x:Name="Hair1_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress5_1"/>
-                <Image Tapped="Hair2_1_Tapped" IsTapEnabled="True" Source="Assets/Images/hiukset/tukka1_2.png" x:Name="Hair1_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress5_1" RelativePanel.RightOf="Dress2_1"/>
-                <Image Tapped="Hair2_1_Tapped" IsTapEnabled="True" Source="Assets/Images/hiukset/tukka1_3.png" x:Name="Hair1_3" Height="100" Width="auto" Margin="5" RelativePanel.Below="Dress5_1" RelativePanel.RightOf="Dress2_2"/>
+                <Image Tapped="Hair2_1_Tapped" IsTapEnabled="True" Source="Assets/Images/hiukset/tukka1.png" x:Name="Hair1_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="WardTextBlock2"/>
+                <Image Tapped="Hair2_1_Tapped" IsTapEnabled="True" Source="Assets/Images/hiukset/tukka1_2.png" x:Name="Hair1_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="WardTextBlock2" RelativePanel.RightOf="Dress2_1"/>
+                <Image Tapped="Hair2_1_Tapped" IsTapEnabled="True" Source="Assets/Images/hiukset/tukka1_3.png" x:Name="Hair1_3" Height="100" Width="auto" Margin="5" RelativePanel.Below="WardTextBlock2" RelativePanel.RightOf="Dress2_2"/>
 
                 <Image Tapped="Hair2_1_Tapped" IsTapEnabled="True" Source="Assets/Images/hiukset/tukka2.png" x:Name="Hair2_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair1_1"/>
                 <Image Tapped="Hair2_1_Tapped" IsTapEnabled="True" Source="Assets/Images/hiukset/tukka2_2.png" x:Name="Hair2_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair1_1" RelativePanel.RightOf="Dress2_1"/>
@@ -92,18 +103,23 @@
                 <Image Tapped="Hair2_1_Tapped" IsTapEnabled="True" Source="Assets/Images/hiukset/tukka4_2.png" x:Name="Hair5_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair3_1" RelativePanel.RightOf="Dress2_1"/>
                 <Image Tapped="Hair2_1_Tapped" IsTapEnabled="True" Source="Assets/Images/hiukset/tukka4_3.png" x:Name="Hair5_3" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair3_1" RelativePanel.RightOf="Dress2_2"/>
 
+                <TextBlock x:Name="WardTextBlock3" TextWrapping="Wrap" Text="Pick your favorite accesories" FontSize="20" FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars" Margin="85,1150,340,5">
+                    <TextBlock.Foreground>
+                        <SolidColorBrush Color="#FF0070A0"/>
+                    </TextBlock.Foreground>
+                </TextBlock>
 
-                <Image Tapped="Heart_1_Tapped" IsTapEnabled="True" Source="Assets/Images/assat/sydan.png" x:Name="Heart_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair5_1"/>
-                <Image Tapped="Heart_1_Tapped" IsTapEnabled="True"  Source="Assets/Images/assat/sydan_2.png" x:Name="Heart_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair5_1" RelativePanel.RightOf="Dress2_1"/>
-                <Image Tapped="Heart_1_Tapped" IsTapEnabled="True"  Source="Assets/Images/assat/sydan_3.png" x:Name="Heart_3" Height="100" Width="auto" Margin="5" RelativePanel.Below="Hair5_1" RelativePanel.RightOf="Dress2_2"/>
+                <Image Tapped="Heart_1_Tapped" IsTapEnabled="True" Source="Assets/Images/assat/sydan.png" x:Name="Heart_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="WardTextBlock3"/>
+                <Image Tapped="Heart_1_Tapped" IsTapEnabled="True"  Source="Assets/Images/assat/sydan_2.png" x:Name="Heart_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="WardTextBlock3" RelativePanel.RightOf="Dress2_1"/>
+                <Image Tapped="Heart_1_Tapped" IsTapEnabled="True"  Source="Assets/Images/assat/sydan_3.png" x:Name="Heart_3" Height="100" Width="auto" Margin="5" RelativePanel.Below="WardTextBlock3" RelativePanel.RightOf="Dress2_2"/>
 
 
 
                 <Image Tapped="Crown_1_Tapped" IsTapEnabled="True" Source="Assets/Images/assat/kruunu1.png" x:Name="Crown_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Heart_1"/>
                 <Image  Tapped="Crown_2_Tapped" IsTapEnabled="True" Source="Assets/Images/assat/kruunu2.png" x:Name="Crown_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Heart_1" RelativePanel.RightOf="Dress2_1"/>
 
-                <Image Tapped="Crown_1_Tapped" IsTapEnabled="True" Source="Assets/Images/assat/suu1.png" x:Name="Acc1_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Crown_1" RelativePanel.RightOf="Dress2_2"/>
-                <Image Tapped="Crown_1_Tapped" IsTapEnabled="True" Source="Assets/Images/assat/suu2.png" x:Name="Acc1_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Crown_1" RelativePanel.RightOf="Dress2_1"/>
+                <Image Tapped="Lips_1_Tapped" IsTapEnabled="True" Source="Assets/Images/assat/suu1.png" x:Name="Acc1_1" Height="100" Width="auto" Margin="5" RelativePanel.Below="Crown_1" RelativePanel.RightOf="Dress2_2"/>
+                <Image Tapped="Lips_1_Tapped" IsTapEnabled="True" Source="Assets/Images/assat/suu2.png" x:Name="Acc1_2" Height="100" Width="auto" Margin="5" RelativePanel.Below="Crown_1" RelativePanel.RightOf="Dress2_1"/>
                 <Image Tapped="Acc1_3_Tapped" IsTapEnabled="True" Source="Assets/Images/assat/ripset.png" x:Name="Acc1_3" Height="100" Width="auto" Margin="5" RelativePanel.Below="Crown_1"/>
 
 
