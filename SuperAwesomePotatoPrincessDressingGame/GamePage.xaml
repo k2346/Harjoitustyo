@@ -122,7 +122,7 @@
 
         </Canvas>
 
-        <Button x:Name="saveButton" Content="Save your outfit" Padding="10" Margin="198,924,659,22" HorizontalAlignment="Center"  FontSize="17" Click="saveButton_Click" FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars" Background="#02000000">
+        <Button x:Name="saveButton" Content="Save your outfit" Padding="10" Margin="101,924,756,22" HorizontalAlignment="Center"  FontSize="17" Click="saveButton_Click" FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars" Background="#02000000">
             <Button.BorderBrush>
                 <SolidColorBrush Color="{StaticResource Potato_yellow}"/>
             </Button.BorderBrush>
@@ -137,6 +137,23 @@
                 <SolidColorBrush Color="#FF27EAA1"/>
             </TextBlock.Foreground>
         </TextBlock>
+        <Button x:Name="moveOutfitsButton" 
+                Content="See saved outfits" 
+                Padding="10"
+                HorizontalAlignment="Center"  
+                FontSize="17" 
+                Click="moveOutfitsButton_Click" 
+                FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars"
+                Background="#02000000"
+                Margin="303,924,550,22">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{StaticResource Potato_yellow}"/>
+            </Button.BorderBrush>
+
+            <Button.Foreground>
+                <SolidColorBrush Color="{StaticResource Potato_blue}"/>
+            </Button.Foreground>
+        </Button>
 
 
     </Grid>

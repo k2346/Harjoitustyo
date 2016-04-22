@@ -88,7 +88,9 @@ namespace SuperAwesomePotatoPrincessDressingGame
             
         }
 
-
+        //************
+        //NAVIGATION!!!
+        //************
         // return button
         private void ReturnButton_Click(object sender, RoutedEventArgs e)
         {
@@ -102,7 +104,15 @@ namespace SuperAwesomePotatoPrincessDressingGame
                 rootFrame.GoBack();
             }
         }
+        // Mene SavedOutfitsPagelle
+        private void moveOutfitsButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SavedOutFitsPage));
+        }
 
+        //**************
+        //DRESSES!!!!!
+        //**************
         // Lisätään mekkoja perunan päälle
         private void Dress1_1_Tapped(object sender, TappedRoutedEventArgs e)
         {

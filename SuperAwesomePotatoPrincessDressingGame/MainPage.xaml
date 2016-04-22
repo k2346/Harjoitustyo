@@ -61,7 +61,7 @@
             </Button>
 
         </StackPanel>
-        <!--
+       
         <Button x:Name="SoundButton"
                 Content="Sound"
                 Padding="10" 
@@ -78,7 +78,7 @@
             <Button.Foreground>
                 <SolidColorBrush Color="{StaticResource Potato_blue}"/>
             </Button.Foreground>
-        </Button> -->
+        </Button> 
 
 
 
