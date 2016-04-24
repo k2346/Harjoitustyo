@@ -26,27 +26,10 @@ namespace SuperAwesomePotatoPrincessDressingGame
     /// </summary>
     public sealed partial class SavedOutFitsPage : Page
     {
+        Windows.Storage.StorageFolder storageFolder =
+       Windows.Storage.ApplicationData.Current.LocalFolder;
 
-        //Hae käyttäjältä koko kansio
-
-
-        // define storage file
-        // define storage folder
-   //     private Windows.Storage.StorageFile sampleFile;
-    //    Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
-     //   private async void CreateOrOpenFile()
-       // {
-         //   Windows.Storage.StorageFolder storageFolder =
-           //     Windows.Storage.ApplicationData.Current.LocalFolder;
-           // sampleFile =
-            //    await storageFolder.CreateFileAsync("sample.txt", Windows.Storage.CreationCollisionOption.OpenIfExists);
-     //   }
-
-        // read and display file content
-     //   private async void ReadFile()
-      //  {
-        //    myTextBlock.Text = await Windows.Storage.FileIO.ReadTextAsync(sampleFile);
-       // }
+        List<BitmapImage> images = new List<BitmapImage>();
 
         public SavedOutFitsPage()
         {
@@ -54,24 +37,24 @@ namespace SuperAwesomePotatoPrincessDressingGame
             // try open 1000x1000 window
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
             ApplicationView.PreferredLaunchViewSize = new Size(1000, 1000);
+
+            flipviewload();
         }
 
 
         //Tässä laitetaan kansiossa olevat kuvat listaan ja lista toistetaan savedView nimisessä Flipviewerissä
-        // Ei lisää vielä kuvia, miksi ei toimi?
+      
         public async Task flipviewload()
         {
-           Windows.Storage.StorageFolder storageFolder =
-           Windows.Storage.ApplicationData.Current.LocalFolder;
+     
 
             IReadOnlyList<StorageFile> fileList = await storageFolder.GetFilesAsync();
-            var images = new List<BitmapImage>();
             if (fileList != null)
             {
                 foreach (StorageFile file in fileList)
                 {
                     string cExt = file.FileType;
-                    if (cExt.ToUpper() == ".png")
+                    if (cExt.Equals(".png"))
                     {
                         Windows.Storage.Streams.IRandomAccessStream fileStream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
                         using (Windows.Storage.Streams.IRandomAccessStream filestream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read))
@@ -86,18 +69,16 @@ namespace SuperAwesomePotatoPrincessDressingGame
             savedView.ItemsSource = images;
         }
 
-
-
-
-
         private void LeftButton_Click(object sender, RoutedEventArgs e)
         {
-
+            // show previous image
+            if (savedView.SelectedIndex > 0) savedView.SelectedIndex--;
         }
 
         private void RightButton_Click(object sender, RoutedEventArgs e)
         {
-
+            // show next image
+            if (savedView.SelectedIndex < (images.Count - 1)) savedView.SelectedIndex++;
         }
 
         private void ReturnButton_Click(object sender, RoutedEventArgs e)
@@ -117,5 +98,9 @@ namespace SuperAwesomePotatoPrincessDressingGame
             Application.Current.Exit();
         }
 
+        private void RemoveButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

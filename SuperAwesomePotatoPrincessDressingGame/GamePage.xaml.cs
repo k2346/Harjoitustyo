@@ -54,6 +54,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
         // define storage file
         
         Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+        
 
 
         private bool IsDress = false;
@@ -517,19 +518,14 @@ namespace SuperAwesomePotatoPrincessDressingGame
     }
 
         //Koodia valmiin perunan tallentamiseen
-        //EI TOIMI VIELÄ OIKEIN, OTTAA KUVAN KOKO HÖSKÄSTÄ EIKÄ VAAN CANVASISTA
-        /// <summary>
-        /// Event handler for the "Save Image.." button.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private async void saveButton_Click(object sender, RoutedEventArgs e)
         {
 
 
             // Render to an image at the current system scale and retrieve pixel contents
             RenderTargetBitmap renderTargetBitmap = new RenderTargetBitmap();
-            await renderTargetBitmap.RenderAsync(RenderedCanvas);
+            await renderTargetBitmap.RenderAsync(MyGrid);
             var pixelBuffer = await renderTargetBitmap.GetPixelsAsync();
             // tallennetaan kuva nimellä potato ja lisätään perään yksilöivä timestamp
             var saveFile = await storageFolder.CreateFileAsync("potato.png".AppendTimeStamp(), Windows.Storage.CreationCollisionOption.OpenIfExists);

@@ -18,7 +18,7 @@
         <Color x:Key="Potato_dark_lilac">#FF8E06E4</Color>
     </Page.Resources>
 
-    <Grid Background="Black">
+    <Grid Background="Transparent">
        
         <Image Source="Assets/Images/Taustakuva_hahmot.png" Width="1000" Height="1000"></Image>
       

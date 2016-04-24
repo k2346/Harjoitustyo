@@ -8,24 +8,15 @@
     mc:Ignorable="d"
     Width="1000"
     Height="1000"
+    Background="Transparent"
     >
 
     <Grid 
         x:Name="MyGrid02"
-        Background="Black" Margin="10,10,10,0">
+        Background="Transparent" Margin="10,10,10,0">
         <Image Source="Assets/Images/Taustakuva_game3.png" Width="auto" Height="auto"
                    HorizontalAlignment="Center" />
-
-
-        <!--
-        <StackPanel HorizontalAlignment="Left" Height="640" Margin="10,70,0,0" VerticalAlignment="Top" Width="425">
-            <Image Source="Assets/Images/potato_naked.png"  x:Name="PotatoImage" HorizontalAlignment="Center" Height="640" VerticalAlignment="Center" Width="327" Margin="45,0,53,0"   />
-        </StackPanel> 
-        -->
-
-        <!--
-        TÄMÄ EI TOIMI, AIHEUTTAA GAME PAGEN VIRHEEN
-        TESTAILE TOIMIVAKSI -->
+        
         <Button x:Name="ReturnButton"
                 Content="Return"
                 Padding="10" 
@@ -132,7 +123,7 @@
 
 
         </ScrollViewer>
-        <Canvas x:Name="MyGrid" HorizontalAlignment="Left" Height="771" Margin="0,116,0,0" VerticalAlignment="Top" Width="623">
+        <Canvas x:Name="MyGrid" HorizontalAlignment="Left" Height="771" Margin="0,116,0,0" VerticalAlignment="Top" Width="623" Background="Transparent"> 
             <Image Source="Assets/Images/potato_naked.png"  x:Name="PotatoImage" HorizontalAlignment="Center" Height="640" VerticalAlignment="Center" Width="327" Canvas.Left="107" Canvas.Top="123"   />
 
 
