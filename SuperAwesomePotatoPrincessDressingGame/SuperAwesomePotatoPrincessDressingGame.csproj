@@ -131,6 +131,8 @@
     <Content Include="Assets\Images\assat\sydan.png" />
     <Content Include="Assets\Images\assat\sydan_2.png" />
     <Content Include="Assets\Images\assat\sydan_3.png" />
+    <Content Include="Assets\Images\frame.png" />
+    <Content Include="Assets\Images\frame02.png" />
     <Content Include="Assets\Images\musa.mp3" />
     <Content Include="Assets\Images\hiukset\tukka1.png" />
     <Content Include="Assets\Images\hiukset\tukka1_2.png" />

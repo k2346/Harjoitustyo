@@ -20,29 +20,32 @@
     </Page.Resources>
 
     <Grid Background="Transparent">
-       
+
         <Image Source="Assets/Images/Taustakuva.png" Width="1000" Height="1000"
                    HorizontalAlignment="Center" />
 
-        
-            
+        <Image Source="Assets/Images/frame02.png" Width="700"
+                   HorizontalAlignment="Center" VerticalAlignment="Center" />
+
         <FlipView x:Name="savedView" 
                           HorizontalAlignment="Center" 
                           VerticalAlignment="Center" 
-                          Width="600" Height="600"
-                            Background="Pink">
+                          Width="500" Height="500"
+                            Background="Transparent">
+            
 
             <FlipView.ItemTemplate>
                 <DataTemplate>
                     <Image Source="{Binding}" Stretch="UniformToFill"/>
                 </DataTemplate>
             </FlipView.ItemTemplate>
+            <TextBlock x:Name="textBlock" Height="100" TextWrapping="Wrap" Text="TextBlock" Width="100"/>
 
         </FlipView>
-           
 
-      
-    
+
+
+
         <Button x:Name="LeftButton"
                     Content="Left"
                     HorizontalAlignment="Left"
@@ -126,12 +129,12 @@
 
 
         </TextBlock>
-        <Button x:Name="RemoveButton" Content="Delete all outfits" HorizontalAlignment="Left" Margin="361,852,0,0" VerticalAlignment="Top" Padding="10" 
-                FontSize="27" 
+        <Button x:Name="RemoveButton" Content="Delete all outfits"  VerticalAlignment="Bottom" Padding="10" 
+                FontSize="27" HorizontalAlignment="Center"
    
                 Click="RemoveButton_Click" 
                 FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars"
-                Background="#02000000">
+                Background="#02000000" Margin="401,0,401,48">
             <Button.BorderBrush>
                 <SolidColorBrush Color="{StaticResource Potato_yellow}"/>
             </Button.BorderBrush>
@@ -140,6 +143,23 @@
                 <SolidColorBrush Color="{StaticResource Potato_blue}"/>
             </Button.Foreground>
         </Button>
+
+        <TextBlock x:Name="deleteTextBlock" 
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Top"
+                   Margin="272,478,250,0"
+                   TextWrapping="Wrap" 
+                   Text=""
+                   TextAlignment="Center"
+                   FontSize="50" 
+                   FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars"
+                   Height="160" Width="478">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{StaticResource Potato_blue}"/>
+            </TextBlock.Foreground>
+
+
+        </TextBlock>
 
 
 

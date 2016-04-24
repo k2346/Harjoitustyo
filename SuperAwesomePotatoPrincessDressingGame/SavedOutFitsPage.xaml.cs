@@ -35,6 +35,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
         {
             this.InitializeComponent();
             // try open 1000x1000 window
+
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
             ApplicationView.PreferredLaunchViewSize = new Size(1000, 1000);
 
@@ -43,10 +44,10 @@ namespace SuperAwesomePotatoPrincessDressingGame
 
 
         //Tässä laitetaan kansiossa olevat kuvat listaan ja lista toistetaan savedView nimisessä Flipviewerissä
-      
+
         public async Task flipviewload()
         {
-     
+
 
             IReadOnlyList<StorageFile> fileList = await storageFolder.GetFilesAsync();
             if (fileList != null)
@@ -67,6 +68,37 @@ namespace SuperAwesomePotatoPrincessDressingGame
                 }
             }
             savedView.ItemsSource = images;
+        }
+// ladataan sivu uudelleen
+        public bool Reload()
+        {
+            if (!this.Frame.BackStack.Any())
+                return false;
+            var current = this.Frame.BackStack.First();
+            this.Frame.BackStack.Remove(current);
+            return this.Frame.Navigate(current.SourcePageType, current.Parameter);
+        }
+
+
+        // asynkroninen metodi joka poistaa kaikki käyttäjän tallentamat kuvat 
+        public async void deletefile()
+        {
+            StorageFolder sourceFolder = ApplicationData.Current.LocalFolder;
+ 
+
+            IReadOnlyList<StorageFile> folderList = await sourceFolder.GetFilesAsync();
+            if (folderList.Count > 0)
+            {
+                foreach (StorageFile f1 in folderList)
+                {
+
+                    await f1.DeleteAsync(StorageDeleteOption.PermanentDelete);
+                   Reload();
+                }
+            }
+            deleteTextBlock.Text = "Nothing to show! Go and create a new Potato Princess";
+
+
         }
 
         private void LeftButton_Click(object sender, RoutedEventArgs e)
@@ -101,6 +133,10 @@ namespace SuperAwesomePotatoPrincessDressingGame
         private void RemoveButton_Click(object sender, RoutedEventArgs e)
         {
 
+                 deletefile();  
+
+                }
+            }
         }
-    }
-}
+    
+
