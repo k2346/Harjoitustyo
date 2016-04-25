@@ -77,13 +77,18 @@ namespace SuperAwesomePotatoPrincessDressingGame
             var current = this.Frame.BackStack.First();
             this.Frame.BackStack.Remove(current);
             return this.Frame.Navigate(current.SourcePageType, current.Parameter);
+
+
         }
 
 
         // asynkroninen metodi joka poistaa kaikki käyttäjän tallentamat kuvat 
         public async void deletefile()
         {
-            StorageFolder sourceFolder = ApplicationData.Current.LocalFolder;
+
+           
+                //...........
+                StorageFolder sourceFolder = ApplicationData.Current.LocalFolder;
  
 
             IReadOnlyList<StorageFile> folderList = await sourceFolder.GetFilesAsync();

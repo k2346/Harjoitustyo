@@ -54,7 +54,7 @@
                     FontSize="27"
                     Click="LeftButton_Click"
                     FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars"
-                    Background="#02000000" Width="75" Height="44">
+                    Background="#02000000" Width="75" Height="44"  Margin="68,478,0,478">
             <Button.BorderBrush>
                 <SolidColorBrush 
                         Color="{StaticResource Potato_yellow}"/>
@@ -71,7 +71,7 @@
                     FontSize="27" 
                     Click="RightButton_Click" 
                     FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars"
-                    Background="#02000000" Width="77" Height="44">
+                    Background="#02000000" Width="77" Height="44" Margin="0,478,68,478">
             <Button.BorderBrush>
                 <SolidColorBrush 
                             Color="{StaticResource Potato_yellow}"/>
@@ -129,12 +129,49 @@
 
 
         </TextBlock>
-        <Button x:Name="RemoveButton" Content="Delete all outfits"  VerticalAlignment="Bottom" Padding="10" 
+        <Button x:Name="Remove2Button" Content="Delete all outfits"  VerticalAlignment="Bottom" Padding="10" 
                 FontSize="27" HorizontalAlignment="Center"
-   
-                Click="RemoveButton_Click" 
                 FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars"
                 Background="#02000000" Margin="401,0,401,48">
+
+            <Button.Flyout>
+                <Flyout>
+
+                    <StackPanel Width="323" Height="222" Background="#FFC3B1F7">
+                        <TextBlock  HorizontalAlignment="Center"
+                   VerticalAlignment="Top"
+                   Margin="50"
+                   TextWrapping="Wrap" 
+                   Text="Are you really sure you want to delete all of your saved outfits?"
+                   TextAlignment="Center"
+                   FontSize="20" 
+                   FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars"
+                   >
+                           <TextBlock.Foreground>
+                            <SolidColorBrush Color="{StaticResource Potato_blue}"/>
+                            </TextBlock.Foreground> 
+                           </TextBlock>
+                        <Button Content="Yes" 
+                        	x:Name="RemoveButton"   VerticalAlignment="Bottom" Padding="10" 
+                        	FontSize="20" HorizontalAlignment="Center"
+                        	Click="RemoveButton_Click" 
+                        	FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars"
+                        	Background="#02000000" Margin="139,0,138,0" >
+                            <Button.BorderBrush>
+                                <SolidColorBrush Color="{StaticResource Potato_yellow}"/>
+                            </Button.BorderBrush>
+
+                            <Button.Foreground>
+                                <SolidColorBrush Color="{StaticResource Potato_blue}"/>
+                            </Button.Foreground>
+
+
+                        </Button>
+                    </StackPanel>
+                </Flyout>
+            </Button.Flyout>
+            
+            
             <Button.BorderBrush>
                 <SolidColorBrush Color="{StaticResource Potato_yellow}"/>
             </Button.BorderBrush>
