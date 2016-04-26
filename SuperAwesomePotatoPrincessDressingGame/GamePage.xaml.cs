@@ -56,6 +56,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
         Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
         
 
+        //Onko perunalla jotain päällä vai ei, eli voidaanko lisätä uusia, määritellään näillä muuttujilla
 
         private bool IsDress = false;
         private bool IsHair = false;
@@ -75,6 +76,9 @@ namespace SuperAwesomePotatoPrincessDressingGame
             this.InitializeComponent();
 
         }
+
+        //Poistetaan vaatteet/hiukset/jne.. perunan päältä
+        //Ehtolause muuttaa perunan "tilan" niin että poistetut voidaan vaihtaa uusiin
 
        private void Image_Tapped(object sender, TappedRoutedEventArgs e)
         {
@@ -130,6 +134,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
         //Mekot
         //**************
         // Lisätään mekkoja perunan päälle
+
         private void Dress1_1_Tapped(object sender, TappedRoutedEventArgs e)
         {
             if (IsDress == false)
