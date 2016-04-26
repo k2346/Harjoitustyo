@@ -17,7 +17,6 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace SuperAwesomePotatoPrincessDressingGame
 {
@@ -26,6 +25,8 @@ namespace SuperAwesomePotatoPrincessDressingGame
     /// </summary>
     public sealed partial class SavedOutFitsPage : Page
     {
+
+// Määritellään tallennuskansio ja lista tallennettavista kuvista
         Windows.Storage.StorageFolder storageFolder =
        Windows.Storage.ApplicationData.Current.LocalFolder;
 
@@ -34,11 +35,11 @@ namespace SuperAwesomePotatoPrincessDressingGame
         public SavedOutFitsPage()
         {
             this.InitializeComponent();
-            // try open 1000x1000 window
+            // Avataan sovellus 1000 x 1000
 
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
             ApplicationView.PreferredLaunchViewSize = new Size(1000, 1000);
-
+            //ladataan flipviewiin kuvat kansiosta
             flipviewload();
         }
 
@@ -69,7 +70,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
             }
             savedView.ItemsSource = images;
         }
-// ladataan sivu uudelleen
+// metodi joka lataa sivun uudelleen 
         public bool Reload()
         {
             if (!this.Frame.BackStack.Any())
@@ -85,9 +86,6 @@ namespace SuperAwesomePotatoPrincessDressingGame
         // asynkroninen metodi joka poistaa kaikki käyttäjän tallentamat kuvat 
         public async void deletefile()
         {
-
-           
-                //...........
                 StorageFolder sourceFolder = ApplicationData.Current.LocalFolder;
  
 
@@ -108,16 +106,17 @@ namespace SuperAwesomePotatoPrincessDressingGame
 
         private void LeftButton_Click(object sender, RoutedEventArgs e)
         {
-            // show previous image
+            // Näytä edellinen kuva flipviewissä
             if (savedView.SelectedIndex > 0) savedView.SelectedIndex--;
         }
 
         private void RightButton_Click(object sender, RoutedEventArgs e)
         {
-            // show next image
+            // Näytä seuraava kuva flipviewissä
             if (savedView.SelectedIndex < (images.Count - 1)) savedView.SelectedIndex++;
         }
 
+        //return buttonia klikkaamalla navigoidaan takaisin
         private void ReturnButton_Click(object sender, RoutedEventArgs e)
         {
             Frame rootFrame = Window.Current.Content as Frame;
@@ -130,11 +129,13 @@ namespace SuperAwesomePotatoPrincessDressingGame
                 rootFrame.GoBack();
             }
         }
+
+        //Quit button lopettaa sovelluksen
         private void QuitButton_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Exit();
         }
-
+        //Remove buttonilla suoritetaan deletefile metodi, joka poistaa kaikki kansiossa olevat käyttäjän tallentamat kuvat.
         private void RemoveButton_Click(object sender, RoutedEventArgs e)
         {
 

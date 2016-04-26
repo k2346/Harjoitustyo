@@ -130,6 +130,27 @@
         </Canvas>
 
         <Button x:Name="saveButton" Content="Save your outfit" Padding="10" Margin="101,924,756,22" HorizontalAlignment="Center"  FontSize="17" Click="saveButton_Click" FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars" Background="#02000000">
+
+            <Button.Flyout>
+                <Flyout>
+
+                    <StackPanel Width="200" Height="100" Background="#FFC3B1F7">
+                        <TextBlock  HorizontalAlignment="Center"
+                   VerticalAlignment="Top"
+                   Margin="20"
+                   TextWrapping="Wrap" 
+                   Text="Outfit saved!"
+                   TextAlignment="Center"
+                   FontSize="30" 
+                   FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars"
+                   >
+                            <TextBlock.Foreground>
+                                <SolidColorBrush Color="{StaticResource Potato_blue}"/>
+                            </TextBlock.Foreground>
+                        </TextBlock>
+                    </StackPanel>
+                </Flyout>
+            </Button.Flyout>
             <Button.BorderBrush>
                 <SolidColorBrush Color="{StaticResource Potato_yellow}"/>
             </Button.BorderBrush>
@@ -138,12 +159,7 @@
                 <SolidColorBrush Color="{StaticResource Potato_blue}"/>
             </Button.Foreground>
         </Button>
-        <TextBlock x:Name="infoTextBlock" HorizontalAlignment="Left" Margin="49,817,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="472"
-                    FontSize="30" FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars" Height="36" TextAlignment="Center">
-            <TextBlock.Foreground>
-                <SolidColorBrush Color="#FF27EAA1"/>
-            </TextBlock.Foreground>
-        </TextBlock>
+        
         <Button x:Name="moveOutfitsButton" 
                 Content="See saved outfits" 
                 Padding="10"

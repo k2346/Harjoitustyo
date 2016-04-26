@@ -62,23 +62,7 @@
 
         </StackPanel>
        
-        <Button x:Name="SoundButton"
-                Content="Sound"
-                Padding="10" 
-                FontSize="27" 
-                HorizontalAlignment="Right"
-                VerticalAlignment="Top"
-                Click="SoundButton_Click"
-                FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars"
-                Background="#02000000">
-            <Button.BorderBrush>
-                <SolidColorBrush Color="{StaticResource Potato_yellow}"/>
-            </Button.BorderBrush>
 
-            <Button.Foreground>
-                <SolidColorBrush Color="{StaticResource Potato_blue}"/>
-            </Button.Foreground>
-        </Button> 
 
 
 
