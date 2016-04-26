@@ -41,6 +41,11 @@
                 <SolidColorBrush Color="#FF0070A0"/>
             </TextBlock.Foreground>
         </TextBlock>
+        <TextBlock x:Name="WardTextBlock5" TextWrapping="Wrap" Text="Click the item you want your potato to wear and if you want to remove it just click the potato" FontSize="25" FontFamily="Assets/Fonts/Little Twin Stars.ttf#Little Twin Stars" Margin="600,150,5,100">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="#FF0070A0"/>
+            </TextBlock.Foreground>
+        </TextBlock>
         <ScrollViewer HorizontalAlignment="Left" Height="721" VerticalAlignment="Top" Width="342" Margin="628,231,0,0"  VerticalScrollBarVisibility="Visible" 
                         HorizontalScrollBarVisibility="Visible"  >
             <ScrollViewer.BorderBrush>
