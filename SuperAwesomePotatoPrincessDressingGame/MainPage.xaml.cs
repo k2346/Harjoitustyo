@@ -20,7 +20,11 @@ using Windows.UI.Xaml.Navigation;
 namespace SuperAwesomePotatoPrincessDressingGame
 {
     /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// Super Awesome Potato Princess Dressing Game
+    /// Jenni Rohunen 
+    /// Maiju Shcreck
+    /// Viivi Järvinen
+    /// 2016
     /// </summary>
     public sealed partial class MainPage : Page
 
@@ -28,41 +32,32 @@ namespace SuperAwesomePotatoPrincessDressingGame
         public MainPage()
         {
             this.InitializeComponent();
-            // try open 1000x1000 window
+            // Avataan sovellus 1000 x 1000 ikkunassa
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
             ApplicationView.PreferredLaunchViewSize = new Size(1000, 1000);
 
 
         }
 
-
+        //Play buttonilla navigoidaan Gamepagelle
         private void PlayButton_Click(object sender, RoutedEventArgs e)
         {
 
             this.Frame.Navigate(typeof(GamePage));
         }
 
-        //Go to Saved outfits page
+        //SavedButtonilla navigoidaan SavedOutfitsPagelle
         private void SavedButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(SavedOutFitsPage));
         }
-
+        //Quit button lopettaa sovelluksen
         private void QuitButton_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Exit();
         }
 
 
-
-        //SOUNDBUTTON 
-        private void SoundButton_Click(object sender, RoutedEventArgs e)
-        {
-
-            WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
-            wplayer.URL = "Assets/musa.mp3";
-
-        }
 
     }
 }

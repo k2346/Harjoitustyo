@@ -65,7 +65,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
 
 
         public object PixelFormats { get; private set; }
-        public UIElement RenderedCanvas { get; private set; }
+        
 
 
 
@@ -105,7 +105,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
         }
 
         //************
-        //NAVIGATION!!!
+        //Navigointi sivujen välillä
         //************
         // return button
         private void ReturnButton_Click(object sender, RoutedEventArgs e)
@@ -127,7 +127,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
         }
 
         //**************
-        //DRESSES!!!!!
+        //Mekot
         //**************
         // Lisätään mekkoja perunan päälle
         private void Dress1_1_Tapped(object sender, TappedRoutedEventArgs e)
@@ -419,6 +419,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
 
         // Hiuksien lisäys perunalle
 
+
         private void Hair2_1_Tapped(object sender, TappedRoutedEventArgs e)
         {
             if (IsHair == false)
@@ -527,7 +528,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
         }
     }
 
-        //Koodia valmiin perunan tallentamiseen
+        //Metodi valmiin perunan tallentamiseen.
 
         private async void saveButton_Click(object sender, RoutedEventArgs e)
         {
@@ -540,7 +541,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
             // tallennetaan kuva nimellä potato ja lisätään perään yksilöivä timestamp
             var saveFile = await storageFolder.CreateFileAsync("potato.png".AppendTimeStamp(), Windows.Storage.CreationCollisionOption.OpenIfExists);
 
-            // Encode the image to the selected file on disk
+            // 
             using (var fileStream = await saveFile.OpenAsync(FileAccessMode.ReadWrite))
             {  
                 var encoder = await BitmapEncoder.CreateAsync(BitmapEncoder.PngEncoderId, fileStream);
@@ -556,8 +557,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
                 await encoder.FlushAsync();
             }
 
-            // Kerrotaan käyttäjälle, että tallennus onnistui
-            infoTextBlock.Text = "Your Potato Princess has been saved!";
+
 
             
         }
