@@ -419,6 +419,7 @@ namespace SuperAwesomePotatoPrincessDressingGame
 
         // Hiuksien lisäys perunalle
 
+
         private void Hair2_1_Tapped(object sender, TappedRoutedEventArgs e)
         {
             if (IsHair == false)
