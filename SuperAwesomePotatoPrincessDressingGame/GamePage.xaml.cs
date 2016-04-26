@@ -61,6 +61,8 @@ namespace SuperAwesomePotatoPrincessDressingGame
         private bool IsHair = false;
         private bool IsCrown = false;
         private bool IsLips = false;
+        private bool IsHeart = false;
+
 
         public object PixelFormats { get; private set; }
         public UIElement RenderedCanvas { get; private set; }
@@ -93,6 +95,10 @@ namespace SuperAwesomePotatoPrincessDressingGame
             else if (image.Name.Equals("Lips"))
             {
                 IsLips = false;
+            }
+            else if (image.Name.Equals("Heart"))
+            {
+                IsHeart = false;
             }
             MyGrid.Children.Remove(sender as Image);    
             
@@ -433,17 +439,21 @@ namespace SuperAwesomePotatoPrincessDressingGame
         }
 
         private void Heart_1_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            Debug.WriteLine("JEE");
-            Image image = new Image();
-            Image sImage = sender as Image;
-            image.Source = sImage.Source;
-            image.Width = 700;
-            image.Height = 700;
-            image.Margin = new Thickness(-88, 90, 392, 13);
-            image.IsTapEnabled = true;
-            image.Tapped += Image_Tapped;
-            MyGrid.Children.Add(image);
+        {   if (IsHeart == false)
+            {
+                Debug.WriteLine("JEE");
+                Image image = new Image();
+                Image sImage = sender as Image;
+                image.Source = sImage.Source;
+                image.Width = 700;
+                image.Height = 700;
+                image.Margin = new Thickness(-88, 90, 392, 13);
+                image.IsTapEnabled = true;
+                image.Tapped += Image_Tapped;
+                image.Name = "Heart";
+                MyGrid.Children.Add(image);
+                IsHeart = true;
+            }
         }
 
         private void Crown_1_Tapped(object sender, TappedRoutedEventArgs e)
